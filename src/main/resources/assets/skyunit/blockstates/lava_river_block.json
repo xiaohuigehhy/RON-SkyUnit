@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": {
+			"model": "skyunit:block/lava_river_block"
+		}
+	}
+}

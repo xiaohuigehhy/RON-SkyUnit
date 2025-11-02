@@ -1,0 +1,9 @@
+{
+  "block.skyunit.lava_river_block": "Lava River Block",
+  "buildings.villagers.reignofnether.library.mysterious": "Mysterious Library",
+  "item.skyunit.skeleton_horse_summon_unit_spawn_egg": "Skeleton Horse Unit Spawn Egg",
+  "research.skyunit.mysterious_library": "Mysterious Library",
+  "research.skyunit.mysterious_library.tooltip1": "Upgrades this library, unlocking the illusioner ability.",
+  "units.monsters.skyunit.skeleton_horse_summon_unit": "Skeleton Horse Unit",
+  "units.villagers.skyunit.illusioner": "Illusioner"
+}

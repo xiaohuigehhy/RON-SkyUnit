@@ -1,0 +1,9 @@
+{
+  "block.skyunit.lava_river_block": "岩浆护城河方块",
+  "buildings.villagers.reignofnether.library.mysterious": "神秘的图书馆",
+  "item.skyunit.skeleton_horse_summon_unit_spawn_egg": "骷髅马单位刷怪蛋",
+  "research.skyunit.mysterious_library": "神秘的图书馆",
+  "research.skyunit.mysterious_library.tooltip1": "升级此图书馆，以解锁幻术师生成技能",
+  "units.monsters.skyunit.skeleton_horse_summon_unit": "骷髅马单位",
+  "units.villagers.skyunit.illusioner": "幻术师"
+}
