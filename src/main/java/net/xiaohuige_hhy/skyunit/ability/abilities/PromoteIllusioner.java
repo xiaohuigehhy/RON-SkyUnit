@@ -109,6 +109,7 @@ public class PromoteIllusioner extends Ability {
 		super.tickCooldown();
 		this.maxCharges = getMaxCharges() - getCharges();
 		this.charges = getMaxCharges() - getCharges();
+		//使用Library的tick进行改变charge
 	}
 	
 	@Override
