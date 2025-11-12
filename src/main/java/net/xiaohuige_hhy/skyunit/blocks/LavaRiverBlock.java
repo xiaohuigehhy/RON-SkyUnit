@@ -1,7 +1,7 @@
 package net.xiaohuige_hhy.skyunit.blocks;
 
 import com.solegendary.reignofnether.unit.interfaces.Unit;
-import com.solegendary.reignofnether.unit.units.piglins.GruntUnit;
+import com.solegendary.reignofnether.unit.units.piglins.ParrotUnit;
 import com.solegendary.reignofnether.util.Faction;
 
 import net.minecraft.core.BlockPos;
@@ -58,7 +58,7 @@ public class LavaRiverBlock extends Block {
 		
 		if (!pEntity.isSteppingCarefully() &&
 			pEntity instanceof LivingEntity &&
-			!(pEntity instanceof GruntUnit) &&
+			!(pEntity instanceof ParrotUnit) &&
 			!EnchantmentHelper.hasFrostWalker((LivingEntity) pEntity) &&
 			!isPiglinFaction && isDamageTick) {
 			pEntity.lavaHurt();
