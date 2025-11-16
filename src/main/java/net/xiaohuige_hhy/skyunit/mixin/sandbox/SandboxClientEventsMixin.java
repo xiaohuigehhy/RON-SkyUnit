@@ -1,7 +1,7 @@
 package net.xiaohuige_hhy.skyunit.mixin.sandbox;
 
 import com.solegendary.reignofnether.building.production.ProductionItems;
-import com.solegendary.reignofnether.hud.AbilityButton;
+import com.solegendary.reignofnether.hud.buttons.UnitSpawnButton;
 import com.solegendary.reignofnether.sandbox.SandboxClientEvents;
 import com.solegendary.reignofnether.util.Faction;
 
@@ -22,7 +22,7 @@ public class SandboxClientEventsMixin {
 	private static Faction faction;
 	
 	@Inject(method = "getUnitButtons", at = @At("HEAD"), remap = false, cancellable = true)
-	private static void getSkyUnitUnitButtons(CallbackInfoReturnable<List<AbilityButton>> cir) {
+	private static void getSkyUnitUnitButtons(CallbackInfoReturnable<List<UnitSpawnButton>> cir) {
 		
 		if (faction == Faction.VILLAGERS) {
 			cir.setReturnValue(List.of(

@@ -53,8 +53,8 @@ public class SkyUnitBlockRegistrar {
 		});
 	}
 	
-	public static void init() {
-		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	public static void init(FMLJavaModLoadingContext context) {
+		BLOCKS.register(context.getModEventBus());
 	}
 	
 }

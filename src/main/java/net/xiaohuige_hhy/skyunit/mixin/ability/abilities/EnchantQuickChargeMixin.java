@@ -2,9 +2,6 @@ package net.xiaohuige_hhy.skyunit.mixin.ability.abilities;
 
 import com.solegendary.reignofnether.ability.EnchantAbility;
 import com.solegendary.reignofnether.ability.abilities.EnchantQuickCharge;
-import com.solegendary.reignofnether.ability.abilities.EnchantSharpness;
-import com.solegendary.reignofnether.building.buildings.placements.LibraryPlacement;
-import com.solegendary.reignofnether.resources.ResourceCost;
 import com.solegendary.reignofnether.resources.ResourceCosts;
 import com.solegendary.reignofnether.unit.UnitAction;
 
@@ -25,8 +22,8 @@ public class EnchantQuickChargeMixin extends EnchantAbility {
 	
 	@Shadow @Final private static UnitAction ENCHANT_ACTION;
 	
-	public EnchantQuickChargeMixin(LibraryPlacement library) {
-		super(ENCHANT_ACTION, library, ResourceCosts.ENCHANT_QUICK_CHARGE);
+	public EnchantQuickChargeMixin() {
+		super(ENCHANT_ACTION, ResourceCosts.ENCHANT_QUICK_CHARGE);
 	}
 	
 	@Inject(method = "hasAnyEnchant", at = @At("HEAD"), remap = false, cancellable = true)

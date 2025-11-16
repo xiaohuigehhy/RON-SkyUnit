@@ -21,15 +21,15 @@ public class SkyUnitEntityRegistrar {
 		() -> EntityType.Builder.of(SkeletonHorseSummonUnit::new, MobCategory.MONSTER)
 			.sized(EntityType.SKELETON_HORSE.getWidth(), EntityType.SKELETON_HORSE.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
-			.build(new ResourceLocation(SkyUnit.MOD_ID, "skeleton_horse_summon_unit").toString()));
+			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "skeleton_horse_summon_unit").toString()));
 	public static final RegistryObject<EntityType<IllusionerUnit>> ILLUSIONER_UNIT = ENTITIES.register("illusioner_unit",
 		() -> EntityType.Builder.of(IllusionerUnit::new, MobCategory.CREATURE)
 			.sized(EntityType.ILLUSIONER.getWidth(), EntityType.ILLUSIONER.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
-			.build(new ResourceLocation(SkyUnit.MOD_ID, "illusioner_unit").toString()));
+			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "illusioner_unit").toString()));
 	
-	public static void init() {
-		ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+	public static void init(FMLJavaModLoadingContext context) {
+		ENTITIES.register(context.getModEventBus());
 	}
 	
 	public static EntityType<? extends Mob> getEntityType(String unitName) {

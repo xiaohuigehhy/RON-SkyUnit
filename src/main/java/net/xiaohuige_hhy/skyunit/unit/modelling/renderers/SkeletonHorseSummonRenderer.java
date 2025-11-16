@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 @OnlyIn(Dist.CLIENT)
 public class SkeletonHorseSummonRenderer extends MobRenderer<SkeletonHorseSummonUnit, HorseModel<SkeletonHorseSummonUnit>> {
 	
-	private static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation("textures/entity/horse/horse_skeleton.png");
+	private static final ResourceLocation TEXTURE_LOCATION = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/entity/horse/horse_skeleton.png");
 	
 	public SkeletonHorseSummonRenderer(EntityRendererProvider.Context pContext) {
 		super(pContext, new HorseModel<>(pContext.bakeLayer(ModelLayers.SKELETON_HORSE)), 1.0F);

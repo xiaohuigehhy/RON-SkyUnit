@@ -1,7 +1,6 @@
 package net.xiaohuige_hhy.skyunit.mixin.unit.units.monsters;
 
 import com.solegendary.reignofnether.unit.goals.UnitBowAttackGoal;
-import com.solegendary.reignofnether.unit.units.monsters.SkeletonUnit;
 import com.solegendary.reignofnether.unit.units.monsters.StrayUnit;
 
 import net.minecraft.world.entity.EntityType;
@@ -10,7 +9,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.Stray;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

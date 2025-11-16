@@ -20,31 +20,29 @@ import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerUnit;
 
 import java.util.List;
 
-public class BlindnessSpellGoal extends Ability {
+public class BlindnessSpell extends Ability {
 	
 	public static final int CD_MAX_SECONDS = 9;
 	public static final int RANGE = 16;
-	private final IllusionerUnit illusionerUnit;
 	
-	public BlindnessSpellGoal(IllusionerUnit illusionerUnit) {
-		super(UnitAction.TELEPORT, illusionerUnit.level(), CD_MAX_SECONDS * ResourceCost.TICKS_PER_SECOND, RANGE, 0, true);
+	public BlindnessSpell() {
+		super(UnitAction.TELEPORT, CD_MAX_SECONDS * ResourceCost.TICKS_PER_SECOND, RANGE, 0, true);
 		
-		this.illusionerUnit = illusionerUnit;
 		this.autocastEnableAction = UnitAction.SPIN_WEBS_AUTOCAST_ENABLE;
 		this.autocastDisableAction = UnitAction.SPIN_WEBS_AUTOCAST_DISABLE;
 	}
 	
 	@Override
-	public AbilityButton getButton(Keybinding hotkey) {
+	public AbilityButton getButton(Keybinding hotkey, Unit unit) {
 		return new AbilityButton(
 			"Blindness Spell Goal",
-			new ResourceLocation("minecraft", "textures/mob_effect/blindness.png"),
+			ResourceLocation.fromNamespaceAndPath("minecraft", "textures/mob_effect/blindness.png"),
 			hotkey,
-			() -> CursorClientEvents.getLeftClickAction() == UnitAction.TELEPORT || isAutocasting(),
+			() -> CursorClientEvents.getLeftClickAction() == UnitAction.TELEPORT || isAutocasting(unit),
 			() -> false,
 			() -> true,
 			() -> CursorClientEvents.setLeftClickAction(UnitAction.TELEPORT),
-			this::toggleAutocast,
+			() -> toggleAutocast(unit),
 			List.of(
 				FormattedCharSequence.forward(I18n.get("abilities.skyunit.blindness_spell_goal"), Style.EMPTY),
 				FormattedCharSequence.forward(
@@ -56,16 +54,17 @@ public class BlindnessSpellGoal extends Ability {
 				FormattedCharSequence.forward(I18n.get("abilities.reignofnether.blindness_spell_goal"), Style.EMPTY),
 				FormattedCharSequence.forward(I18n.get("abilities.reignofnether.blindness_spell_goal"), Style.EMPTY)
 			),
-			this
+			this,
+			unit
 		);
 	}
 	
 	@Override
 	public void use(Level level, Unit unitUsing, LivingEntity livingEntity) {
-		if (!isOffCooldown())
+		if (!isOffCooldown(unitUsing))
 			return;
+		IllusionerUnit illusionerUnit = (IllusionerUnit) unitUsing;
 		illusionerUnit.getCastBlindnessSpellGoal().setAbility(this);
 		illusionerUnit.getCastBlindnessSpellGoal().setTarget(livingEntity);
 	}
-	
 }

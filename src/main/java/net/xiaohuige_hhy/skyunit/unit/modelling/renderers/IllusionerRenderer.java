@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
 public class IllusionerRenderer extends AbstractVillagerUnitRenderer<IllusionerUnit> {
-	private static final ResourceLocation ILLUSIONER = new ResourceLocation("textures/entity/illager/illusioner.png");
+	private static final ResourceLocation ILLUSIONER = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/entity/illager/illusioner.png");
 	
 	public IllusionerRenderer(EntityRendererProvider.Context p_174186_) {
 		super(p_174186_, new VillagerUnitModel<>(p_174186_.bakeLayer(VillagerUnitModel.LAYER_LOCATION)), 0.5F);

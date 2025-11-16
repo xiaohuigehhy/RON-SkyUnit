@@ -1,7 +1,7 @@
 package net.xiaohuige_hhy.skyunit.unit.units.monsters;
 
+import com.solegendary.reignofnether.ability.Abilities;
 import com.solegendary.reignofnether.ability.Ability;
-import com.solegendary.reignofnether.hud.AbilityButton;
 import com.solegendary.reignofnether.resources.ResourceCost;
 import com.solegendary.reignofnether.unit.Checkpoint;
 import com.solegendary.reignofnether.unit.goals.AbstractMeleeAttackUnitGoal;
@@ -44,7 +44,10 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
+
 public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, AttackerUnit {
+	public static final Abilities ABILITIES = new Abilities();
 	public static final EntityDataAccessor<String> ownerDataAccessor =
 		SynchedEntityData.defineId(SkeletonHorseSummonUnit.class, EntityDataSerializers.STRING);
 	final static public float maxHealth = 50.0f;
@@ -56,11 +59,14 @@ public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, Atta
 	final static public float attacksPerSecond = 0.5f;
 	final static public float attackRange = 2;
 	final static public float attackDamage = 2.0f;
+	final static public float rangedDamageResist = 0.2f;
 	private final ArrayList<Checkpoint> checkpoints = new ArrayList<>();
-	private final List<AbilityButton> abilityButtons = new ArrayList<>();
-	private final List<Ability> abilities = new ArrayList<>();
 	private final List<ItemStack> items = new ArrayList<>();
 	public int maxResources = 0;
+	Object2ObjectArrayMap<Ability, Float> cooldowns = Unit.createCooldownMap();
+	Object2ObjectArrayMap<Ability, Integer> charges = new Object2ObjectArrayMap<>();
+	
+	Ability autocast;
 	UsePortalGoal usePortalGoal;
 	GarrisonGoal garrisonGoal;
 	private int eatingTicksLeft = 0;
@@ -68,15 +74,19 @@ public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, Atta
 	private MoveToTargetBlockGoal moveGoal;
 	private SelectedTargetGoal<? extends LivingEntity> targetGoal;
 	private ReturnResourcesGoal returnResourcesGoal;
+	
 	private BlockPos attackMoveTarget = null;
+	
 	private LivingEntity followTarget = null;
 	private boolean holdPosition = false;
 	private AbstractMeleeAttackUnitGoal attackGoal;
 	private MeleeAttackBuildingGoal attackBuildingGoal;
+	private Abilities abilities = ABILITIES.clone();
 	private int limitedLifeTicks = 900;
 	
-	public SkeletonHorseSummonUnit(EntityType<? extends SkeletonHorseSummonUnit> entityType, Level level) {
+	public SkeletonHorseSummonUnit(EntityType<? extends SkeletonHorse> entityType, Level level) {
 		super(entityType, level);
+		updateAbilityButtons();
 	}
 	
 	public static AttributeSupplier.@NotNull Builder createAttributes() {
@@ -86,6 +96,31 @@ public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, Atta
 			.add(Attributes.MAX_HEALTH, SkeletonHorseSummonUnit.maxHealth)
 			.add(Attributes.FOLLOW_RANGE, Unit.getFollowRange())
 			.add(Attributes.ATTACK_KNOCKBACK, 0.05d);
+	}
+	
+	@Override
+	public void updateAbilityButtons() {
+		abilities = ABILITIES.clone();
+	}
+	
+	@Override
+	public Object2ObjectArrayMap<Ability, Float> getCooldowns() {
+		return cooldowns;
+	}
+	
+	@Override
+	public boolean hasAutocast(Ability ability) {
+		return autocast == ability;
+	}
+	
+	@Override
+	public void setAutocast(Ability autocast) {
+		this.autocast = autocast;
+	}
+	
+	@Override
+	public Object2ObjectArrayMap<Ability, Integer> getCharges() {
+		return charges;
 	}
 	
 	public int getEatingTicksLeft() {
@@ -177,11 +212,7 @@ public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, Atta
 		return Faction.MONSTERS;
 	}
 	
-	public List<AbilityButton> getAbilityButtons() {
-		return abilityButtons;
-	}
-	
-	public List<Ability> getAbilities() {
+	public Abilities getAbilities() {
 		return abilities;
 	}
 	
@@ -303,6 +334,11 @@ public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, Atta
 	
 	public boolean canAttackBuildings() {
 		return getAttackBuildingGoal() != null;
+	}
+	
+	@Override
+	public float getUnitRangedArmorPercentage() {
+		return rangedDamageResist;
 	}
 	
 	@Override

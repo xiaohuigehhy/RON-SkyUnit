@@ -1,6 +1,5 @@
 package net.xiaohuige_hhy.skyunit.ability.abilities;
 
-import com.solegendary.reignofnether.ReignOfNether;
 import com.solegendary.reignofnether.ability.Ability;
 import com.solegendary.reignofnether.building.BuildingPlacement;
 import com.solegendary.reignofnether.building.BuildingServerEvents;
@@ -42,15 +41,21 @@ public class PromoteIllusioner extends Ability {
 	private static final float PILLAGER_RANGE = 16;
 	
 	IllusionerUnit promotedIllusioner = null;
-	BuildingPlacement buildingPlacement;
 	
-	public PromoteIllusioner(@NotNull BuildingPlacement buildingPlacement) {
-		super(UnitAction.PROMOTE_ILLAGER, buildingPlacement.getLevel(), CD_MAX, RANGE, 0, true, true);
-		this.buildingPlacement = buildingPlacement;
-		this.defaultHotkey = Keybindings.keyY;
+	public PromoteIllusioner() {
+		super(UnitAction.PROMOTE_ILLAGER, CD_MAX, RANGE, 0, true, true);
+		this.defaultHotkey = Keybindings.keyL;
 	}
 	
-	private int getMaxCharges() {
+	public boolean isOffCooldown(BuildingPlacement placement) {
+		return getCooldown(placement) <= 0;
+	}
+	
+	public boolean canBypassCooldown(BuildingPlacement buildingPlacement) {
+		return false;
+	}
+	
+	private int getMaxCharges(BuildingPlacement buildingPlacement) {
 		int charge = 2;
 		for (BuildingPlacement building : BuildingServerEvents.getBuildings()) {
 			if (building.ownerName.equals(buildingPlacement.ownerName)) {
@@ -62,7 +67,8 @@ public class PromoteIllusioner extends Ability {
 		return charge;
 	}
 	
-	private int getCharges() {
+	@Override
+	public int getCharges(BuildingPlacement buildingPlacement) {
 		int charge = 0;
 		for (LivingEntity entity : UnitServerEvents.getAllUnits()) {
 			if (entity instanceof IllusionerUnit illusioner && illusioner.getOwnerName().equals(buildingPlacement.ownerName)) {
@@ -73,12 +79,12 @@ public class PromoteIllusioner extends Ability {
 	}
 	
 	@Override
-	public AbilityButton getButton(Keybinding hotkey) {
+	public AbilityButton getButton(Keybinding hotkey, BuildingPlacement buildingPlacement) {
 		return new AbilityButton("Promote Illusioner",
-			new ResourceLocation(SkyUnit.MOD_ID, "textures/mobheads/illusioner.png"),
+			ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/illusioner.png"),
 			hotkey,
 			() -> false,
-			() -> (buildingPlacement.getBuilding() instanceof Library && buildingPlacement.getUpgradeLevel() != 2) || (getMaxCharges() == getCharges()),
+			() -> (buildingPlacement.getBuilding() instanceof Library && buildingPlacement.getUpgradeLevel() != 2) || (getMaxCharges(buildingPlacement) == getCharges(buildingPlacement)),
 			() -> true,
 			() -> CursorClientEvents.setLeftClickAction(UnitAction.PROMOTE_ILLAGER),
 			null,
@@ -100,25 +106,14 @@ public class PromoteIllusioner extends Ability {
 				FormattedCharSequence.forward("", Style.EMPTY),
 				FormattedCharSequence.forward(I18n.get("abilities.reignofnether.promote_illusioner.tooltip4"), Style.EMPTY)
 			),
-			this
+			this,
+			buildingPlacement
 		);
 	}
 	
-	@Override
-	public void tickCooldown() {
-		super.tickCooldown();
-		this.maxCharges = getMaxCharges() - getCharges();
-		this.charges = getMaxCharges() - getCharges();
-	}
-	
-	@Override
-	public boolean isOffCooldown() {
-		return this.getCooldown() <= 0;
-	}
-	
-	@Override
-	public boolean canBypassCooldown() {
-		return false;
+	public int upDateCharges(BuildingPlacement buildingPlacement) {
+		this.maxCharges = getMaxCharges(buildingPlacement);
+		return getMaxCharges(buildingPlacement) - getCharges(buildingPlacement);
 	}
 	
 	@Override
@@ -130,7 +125,7 @@ public class PromoteIllusioner extends Ability {
 			}
 		} else if (targetEntity instanceof PillagerUnit unit) {
 			
-			if (!unit.getOwnerName().equals(this.buildingPlacement.ownerName)) {
+			if (!unit.getOwnerName().equals(buildingUsing.ownerName)) {
 				if (level.isClientSide()) {
 					HudClientEvents.showTemporaryMessage(I18n.get("abilities.reignofnether.promote_illusioner.error3"));
 				}
@@ -162,7 +157,7 @@ public class PromoteIllusioner extends Ability {
 				MiscUtil.shootFirework(level, unit.getEyePosition());
 			}
 			
-			this.setToMaxCooldown();
+			this.setToMaxCooldown(buildingUsing);
 		} else {
 			if (level.isClientSide()) {
 				HudClientEvents.showTemporaryMessage(I18n.get("abilities.reignofnether.promote_illusioner.error4"));

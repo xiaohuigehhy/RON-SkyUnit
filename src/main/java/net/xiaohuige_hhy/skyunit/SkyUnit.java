@@ -9,7 +9,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.IExtensionPoint;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -31,15 +30,14 @@ public class SkyUnit {
 	public static final String VERSION_STRING = "0.4.2-beta";
 	public static final Logger LOGGER = LogUtils.getLogger();
 	
-	public SkyUnit() {
-		SkyUnitItemRegistrar.init();
-		SkyUnitBlockRegistrar.init();
-		SkyUnitEntityRegistrar.init();
+	public SkyUnit(FMLJavaModLoadingContext mlctx) {
+		SkyUnitItemRegistrar.init(mlctx);
+		SkyUnitBlockRegistrar.init(mlctx);
+		SkyUnitEntityRegistrar.init(mlctx);
 		SkyUnitProductionItems.init();
 		
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus bus = mlctx.getModEventBus();
 		bus.addListener(SkyUnit::init);
-		ModLoadingContext mlctx = ModLoadingContext.get();
 		mlctx.registerConfig(ModConfig.Type.COMMON, SkyUnitCommonConfigs.SPEC, "skyunit-common-" + VERSION_STRING + ".toml");
 		mlctx.registerExtensionPoint(
 			IExtensionPoint.DisplayTest.class,

@@ -1,7 +1,9 @@
 package net.xiaohuige_hhy.skyunit.mixin.unit.units.monsters;
 
+import com.solegendary.reignofnether.ability.Abilities;
 import com.solegendary.reignofnether.ability.Ability;
 import com.solegendary.reignofnether.ability.AbilityClientboundPacket;
+import com.solegendary.reignofnether.ability.HeroAbility;
 import com.solegendary.reignofnether.ability.heroAbilities.monster.InsomniaCurse;
 import com.solegendary.reignofnether.ability.heroAbilities.monster.SoulSiphonPassive;
 import com.solegendary.reignofnether.unit.UnitAction;
@@ -34,6 +36,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
+import net.xiaohuige_hhy.skyunit.ability.abilities.VanguardCharge;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitEntityRegistrar;
 import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
 
@@ -45,12 +48,14 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.List;
 import java.util.Objects;
 
 import javax.annotation.Nullable;
+
+import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 
 @Mixin(NecromancerUnit.class)
 public abstract class NecromancerUnitMixin extends Skeleton {
@@ -59,9 +64,14 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	private final static float skyUnit$baseMovementSpeed = 0.19F;
 	@Unique
 	private final static float skyUnit$movementSpeedPerRank = 0.07F;
+	@Shadow
+	@Final
+	public static Abilities ABILITIES;
 	@Shadow(remap = false)
 	@Final
 	private static int ATTACK_WINDUP_TICKS;
+	@Shadow
+	public int souls;
 	@Shadow(remap = false)
 	UsePortalGoal usePortalGoal;
 	@Shadow(remap = false)
@@ -73,9 +83,6 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	@Shadow(remap = false)
 	private int experience;
 	@Shadow(remap = false)
-	@Final
-	private List<Ability> abilities;
-	@Shadow(remap = false)
 	private SelectedTargetGoal<? extends LivingEntity> targetGoal;
 	@Shadow(remap = false)
 	private ReturnResourcesGoal returnResourcesGoal;
@@ -83,13 +90,34 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	private MoveToTargetBlockGoal moveGoal;
 	@Shadow(remap = false)
 	private UnitRangedAttackGoal<? extends LivingEntity> attackGoal;
+	@Shadow
+	private Abilities abilities;
 	
 	protected NecromancerUnitMixin(EntityType<? extends Skeleton> pEntityType, Level pLevel) {
 		super(pEntityType, pLevel);
 	}
 	
+	@Redirect(
+		method = "<clinit>",
+		at = @At(
+			value = "INVOKE",
+			target = "Lcom/solegendary/reignofnether/ability/Abilities;add(Lcom/solegendary/reignofnether/ability/Ability;)V"
+		),
+		remap = false
+	)
+	private static void redirectAdd(Abilities instance, Ability ability) {
+		if (ability instanceof InsomniaCurse) {
+			instance.add(new VanguardCharge());
+			return;
+		}
+		instance.add(ability);
+	}
+	
 	@Shadow(remap = false)
 	public abstract String getOwnerName();
+	
+	@Shadow
+	public abstract void setOwnerName(String name);
 	
 	@Shadow(remap = false)
 	public abstract int consumeSoulsAndGetSoulRank();
@@ -98,22 +126,16 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	public abstract SoulSiphonPassive getSoulSiphon();
 	
 	@Shadow(remap = false)
-	public abstract List<Ability> getAbilities();
-	
-	@Shadow(remap = false)
 	public abstract void initialiseGoals();
 	
 	@Shadow
 	public abstract void setAnchor(BlockPos bp);
 	
-	@Unique
-	public InsomniaCurse skyUnit$getInsomniaCurse() {
-		for (Ability ability : abilities)
-			if (ability instanceof InsomniaCurse)
-				return (InsomniaCurse) ability;
-		return null;
-	}
+	@Shadow
+	public abstract boolean hasAutocast(Ability ability);
 	
+	@Shadow
+	public abstract Object2ObjectArrayMap<HeroAbility, Integer> getHeroAbilityRanks();
 	
 	@Unique
 	private void SkyUnit$summonSkeletonHorseEntity(LivingEntity targetEntity) {
@@ -136,7 +158,7 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 		this.castPhantomGoal = new GenericTargetedSpellGoal(
 			this,
 			0,
-			InsomniaCurse.RANGE,
+			VanguardCharge.RANGE,
 			UnitAnimationAction.ATTACK_UNIT,
 			this::SkyUnit$summonSkeletonHorseEntity,
 			this::SkyUnit$summonSkeletonHorseGround,
@@ -146,7 +168,6 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	
 	@Unique
 	private void SkyUnit$summonSkeletonTrap(LivingEntity entityTarget, BlockPos pos) {
-		
 		TargetingConditions conditions = TargetingConditions.forCombat()
 			.ignoreLineOfSight()
 			.selector(e ->
@@ -159,9 +180,9 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 				lightningbolt.setVisualOnly(true);
 				serverlevel.addFreshEntity(lightningbolt);
 				SoulSiphonPassive soulSiphon = getSoulSiphon();
-				float soul = 0.0F;
-				if (soulSiphon != null && soulSiphon.isAutocasting()) {
-					soul = soulSiphon.souls > 0 ? soulSiphon.soulsPerCast : 1;
+				float soul = 1.0F;
+				if (soulSiphon != null && hasAutocast(soulSiphon) && this.souls > 0) {
+					soul = soulSiphon.soulsPerCast;
 				}
 				for (int i = 0; i < soul / 2; ++i) {
 					double x = this.getX();
@@ -180,10 +201,10 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 							this.SkyUnit$createSkeleton(skeleton, abstracthorse);
 							abstracthorse.push(this.getRandom().triangle(0.0D, 1.1485D), 0.5D, this.getRandom().triangle(0.0D, 1.1485D));
 						}
-						if (soulSiphon.isAutocasting()) {
-							soulSiphon.souls -= 2;
+						if (hasAutocast(soulSiphon)) {
+							this.souls -= 2;
 							if (!level().isClientSide())
-								AbilityClientboundPacket.doAbility(getId(), UnitAction.SOUL_SIPHON_UPDATE, soulSiphon.souls);
+								AbilityClientboundPacket.doAbility(getId(), UnitAction.SOUL_SIPHON_UPDATE, this.souls);
 						}
 						
 					}
@@ -204,12 +225,19 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 			skeletonHorse.setOwnerName(this.getOwnerName());
 			AttributeInstance ai = skeletonHorse.getAttribute(Attributes.MOVEMENT_SPEED);
 			if (ai != null) {
-				InsomniaCurse insomniaCurse = skyUnit$getInsomniaCurse();
-				ai.setBaseValue(skyUnit$baseMovementSpeed + insomniaCurse.rank * skyUnit$movementSpeedPerRank);
+				ai.setBaseValue(skyUnit$baseMovementSpeed + getHeroAbilityRanks().get(skyUnit$getVanguardCharge()) * skyUnit$movementSpeedPerRank);
 			}
 		}
 		
 		return skeletonHorse;
+	}
+	
+	@Unique
+	public VanguardCharge skyUnit$getVanguardCharge() {
+		for (Ability ability : abilities.get())
+			if (ability instanceof VanguardCharge)
+				return (VanguardCharge) ability;
+		return null;
 	}
 	
 	@Contract("_, _ -> param1")

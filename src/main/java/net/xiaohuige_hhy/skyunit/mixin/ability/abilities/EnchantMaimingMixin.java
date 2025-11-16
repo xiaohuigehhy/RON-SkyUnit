@@ -2,7 +2,6 @@ package net.xiaohuige_hhy.skyunit.mixin.ability.abilities;
 
 import com.solegendary.reignofnether.ability.EnchantAbility;
 import com.solegendary.reignofnether.ability.abilities.EnchantMaiming;
-import com.solegendary.reignofnether.building.buildings.placements.LibraryPlacement;
 import com.solegendary.reignofnether.resources.ResourceCosts;
 import com.solegendary.reignofnether.unit.UnitAction;
 
@@ -24,8 +23,8 @@ public abstract class EnchantMaimingMixin extends EnchantAbility {
 	@Final
 	private static UnitAction ENCHANT_ACTION;
 	
-	public EnchantMaimingMixin(LibraryPlacement library) {
-		super(ENCHANT_ACTION, library, ResourceCosts.ENCHANT_MAIMING);
+	public EnchantMaimingMixin() {
+		super(ENCHANT_ACTION, ResourceCosts.ENCHANT_MAIMING);
 	}
 	
 	@Inject(method = "hasAnyEnchant", at = @At("HEAD"), remap = false, cancellable = true)

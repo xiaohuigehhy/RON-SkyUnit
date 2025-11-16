@@ -21,8 +21,8 @@ public class SkyUnitItemRegistrar {
 		ITEMS.register("illusioner_unit_spawn_egg", () -> new ForgeSpawnEggItem(SkyUnitEntityRegistrar.ILLUSIONER_UNIT,
 			7697781, 31436, new Item.Properties()));
 	
-	public static void init() {
-		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+	public static void init(FMLJavaModLoadingContext context) {
+		ITEMS.register(context.getModEventBus());
 	}
 	
 }

@@ -1,4 +1,12 @@
 {
+  "abilities.reignofnether.vanguard_charge": "骷髅先锋",
+  "abilities.reignofnether.vanguard_charge.rank1": "等级 1：移速为 30 格/秒",
+  "abilities.reignofnether.vanguard_charge.rank2": "等级 2：移速为 40 格/秒",
+  "abilities.reignofnether.vanguard_charge.rank3": "等级 3：移速为 50 格/秒",
+  "abilities.reignofnether.vanguard_charge.stats": "\uE006 %d+%d \uE004 %d s \uE005 %d \uE008 %d",
+  "abilities.reignofnether.vanguard_charge.tooltip1": "生成一批迅捷的骷髅骑手，",
+  "abilities.reignofnether.vanguard_charge.tooltip2": "将附近一个骷髅单位转化为骷髅骑手 + 每%d级灵魂虹吸再额外转化一个骷髅。",
+  "abilities.reignofnether.vanguard_charge.tooltip3": "骷髅骑手的骷髅马将逐渐死亡。",
   "block.skyunit.lava_river_block": "岩浆护城河方块",
   "buildings.villagers.reignofnether.library.mysterious": "神秘的图书馆",
   "item.skyunit.skeleton_horse_summon_unit_spawn_egg": "骷髅马单位刷怪蛋",

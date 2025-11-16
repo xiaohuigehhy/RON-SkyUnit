@@ -1,10 +1,3 @@
 {
-  "abilities.reignofnether.insomnia_curse": "骷髅先锋",
-  "abilities.reignofnether.insomnia_curse.stats": "\uE006  %d   \uE004  %ds   \uE005  %d",
-  "abilities.reignofnether.insomnia_curse.tooltip1": "生成一批迅捷的骷髅骑手",
-  "abilities.reignofnether.insomnia_curse.tooltip2": "每消耗两点灵魂再同时生成 1 只骷髅骑手",
-  "abilities.reignofnether.insomnia_curse.tooltip3": "骷髅骑手的骷髅马将在 30 秒后逐渐死亡。",
-  "abilities.reignofnether.insomnia_curse.rank1": "等级 1：移速为 30 格/秒",
-  "abilities.reignofnether.insomnia_curse.rank2": "等级 2：移速为 40 格/秒",
-  "abilities.reignofnether.insomnia_curse.rank3": "等级 3：移速为 50 格/秒"
+
 }

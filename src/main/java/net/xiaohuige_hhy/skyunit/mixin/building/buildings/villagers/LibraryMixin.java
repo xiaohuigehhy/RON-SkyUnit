@@ -4,14 +4,11 @@ import com.solegendary.reignofnether.building.BuildingBlock;
 import com.solegendary.reignofnether.building.BuildingPlacement;
 import com.solegendary.reignofnether.building.buildings.villagers.Library;
 import com.solegendary.reignofnether.building.production.ProductionBuilding;
-import com.solegendary.reignofnether.building.production.ProductionItems;
-import com.solegendary.reignofnether.hud.AbilityButton;
-import com.solegendary.reignofnether.keybinds.Keybinding;
 import com.solegendary.reignofnether.keybinds.Keybindings;
 import com.solegendary.reignofnether.resources.ResourceCost;
-import com.solegendary.reignofnether.util.Faction;
 
 import net.minecraft.world.level.block.Blocks;
+import net.xiaohuige_hhy.skyunit.ability.abilities.PromoteIllusioner;
 import net.xiaohuige_hhy.skyunit.building.production.SkyUnitProductionItems;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,6 +27,7 @@ public abstract class LibraryMixin extends ProductionBuilding {
 	
 	@Inject(method = "<init>", at = @At("TAIL"), remap = false)
 	private void AddMysteriousLibrary(CallbackInfo ci) {
+		this.abilities.add(new PromoteIllusioner(), Keybindings.keyL);
 		this.productions.add(SkyUnitProductionItems.RESEARCH_MYSTERIOUS_LIBRARY, Keybindings.keyM);
 	}
 	

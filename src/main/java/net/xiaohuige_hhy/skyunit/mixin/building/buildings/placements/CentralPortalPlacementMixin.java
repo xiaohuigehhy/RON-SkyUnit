@@ -30,10 +30,10 @@ public abstract class CentralPortalPlacementMixin extends ProductionPlacement im
 		NetherLavaRiverServerEvent.changeNetherLavaRiver(level);
 	}
 	
-	@Inject(method = "tick", at = @At("RETURN"), remap = false)
-	private void reloadPerTick(Level tickLevel, CallbackInfo ci) {
-		if (tickAgeAfterBuilt > 0 && tickAgeAfterBuilt % 20 == 0)
-			NetherLavaRiverServerEvent.changeNetherLavaRiver(level);
-	}
+//	@Inject(method = "tick", at = @At("RETURN"), remap = false)
+//	private void reloadPerTick(Level tickLevel, CallbackInfo ci) {
+////		if (tickAgeAfterBuilt > 0 && tickAgeAfterBuilt % 20 == 0)
+////			NetherLavaRiverServerEvent.changeNetherLavaRiver(level);
+//	}
 	
 }

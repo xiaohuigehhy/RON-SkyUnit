@@ -2,7 +2,6 @@ package net.xiaohuige_hhy.skyunit.mixin.building;
 
 import com.solegendary.reignofnether.ReignOfNether;
 import com.solegendary.reignofnether.api.ReignOfNetherRegistries;
-import com.solegendary.reignofnether.building.Building;
 import com.solegendary.reignofnether.building.BuildingPlacement;
 import com.solegendary.reignofnether.building.BuildingSave;
 import com.solegendary.reignofnether.building.BuildingServerEvents;
@@ -10,8 +9,6 @@ import com.solegendary.reignofnether.building.NetherZoneSaveData;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.block.Rotation;
-import net.xiaohuige_hhy.skyunit.nether.NetherLavaRiverServerEvent;
 import net.xiaohuige_hhy.skyunit.research.researchItems.ResearchMysteriousLibrary;
 
 import org.jetbrains.annotations.NotNull;
@@ -20,7 +17,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.ArrayList;
@@ -40,10 +36,10 @@ public class BuildingServerEventsMixin {
 			ci.cancel();
 		}
 	}
-	
-	@Inject(method = "placeBuilding", at = @At(value = "RETURN"), remap = false)
-	private static void loadNetherLavaRiver(Building building, BlockPos pos, Rotation rotation, String ownerName, int[] builderUnitIds, boolean queue, boolean isDiagonalBridge, CallbackInfoReturnable<BuildingPlacement> cir) {
-		NetherLavaRiverServerEvent.changeNetherLavaRiver(serverLevel);
-	}
+
+//	@Inject(method = "placeBuilding", at = @At(value = "RETURN"), remap = false)
+//	private static void loadNetherLavaRiver(Building building, BlockPos pos, Rotation rotation, String ownerName, int[] builderUnitIds, boolean queue, boolean isDiagonalBridge, CallbackInfoReturnable<BuildingPlacement> cir) {
+//		NetherLavaRiverServerEvent.changeNetherLavaRiver(serverLevel);
+//	}
 	
 }

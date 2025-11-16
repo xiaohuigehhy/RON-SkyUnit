@@ -1,12 +1,12 @@
 package net.xiaohuige_hhy.skyunit.unit.units.villiagers;
 
+import com.solegendary.reignofnether.ability.Abilities;
 import com.solegendary.reignofnether.ability.Ability;
 import com.solegendary.reignofnether.ability.AbilityClientboundPacket;
 import com.solegendary.reignofnether.ability.abilities.PromoteIllager;
 import com.solegendary.reignofnether.fogofwar.FogOfWarClientboundPacket;
-import com.solegendary.reignofnether.hud.AbilityButton;
+import com.solegendary.reignofnether.keybinds.Keybindings;
 import com.solegendary.reignofnether.resources.ResourceCost;
-import com.solegendary.reignofnether.resources.ResourceCosts;
 import com.solegendary.reignofnether.unit.Checkpoint;
 import com.solegendary.reignofnether.unit.UnitAction;
 import com.solegendary.reignofnether.unit.UnitAnimationAction;
@@ -40,15 +40,15 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.monster.AbstractIllager;
 import net.minecraft.world.entity.monster.Illusioner;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.xiaohuige_hhy.skyunit.ability.abilities.BlindnessSpellGoal;
-import net.xiaohuige_hhy.skyunit.ability.abilities.MirrorSpellGoal;
+import net.xiaohuige_hhy.skyunit.ability.abilities.BlindnessSpell;
+import net.xiaohuige_hhy.skyunit.ability.abilities.MirrorSpell;
+import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -57,8 +57,10 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
+
 public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, RangedAttackerUnit {
-	
+	public static final Abilities ABILITIES = new Abilities();
 	public static final EntityDataAccessor<String> ownerDataAccessor =
 		SynchedEntityData.defineId(IllusionerUnit.class, EntityDataSerializers.STRING);
 	final static public float maxHealth = 80.0f;
@@ -72,30 +74,39 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 	final static public float attackDamage = 10.0f;
 	public static final int CAST_MIRROR_SPELL_CHANNEL_SECONDS = 1;
 	public static final int CAST_BLINDNESS_SPELL_CHANNEL_SECONDS = 1;
+	
+	static {
+		ABILITIES.add(new BlindnessSpell(), Keybindings.keyQ);
+		ABILITIES.add(new MirrorSpell(), Keybindings.keyW);
+	}
+	
 	private final ArrayList<Checkpoint> checkpoints = new ArrayList<>();
-	private final List<AbilityButton> abilityButtons = new ArrayList<>();
-	private final List<Ability> abilities = new ArrayList<>();
 	private final List<ItemStack> items = new ArrayList<>();
 	public int maxResources = 100;
 	public int fogRevealDuration = 0;
+	
+	Object2ObjectArrayMap<Ability, Float> cooldowns = Unit.createCooldownMap();
+	Object2ObjectArrayMap<Ability, Integer> charges = new Object2ObjectArrayMap<>();
+	Ability autocast;
 	UsePortalGoal usePortalGoal;
 	GarrisonGoal garrisonGoal;
 	private int eatingTicksLeft = 0;
 	private BlockPos anchorPos = new BlockPos(0, 0, 0);
 	private MoveToTargetBlockGoal moveGoal;
 	private SelectedTargetGoal<? extends LivingEntity> targetGoal;
+	
 	private ReturnResourcesGoal returnResourcesGoal;
+	
 	private BlockPos attackMoveTarget = null;
 	private LivingEntity followTarget = null;
 	private boolean holdPosition = false;
 	private UnitBowAttackGoal<? extends LivingEntity> attackGoal;
 	private GenericUntargetedSpellGoal castMirrorSpellGoal;
 	private GenericTargetedSpellGoal castBlindnessSpellGoal;
+	private Abilities abilities = ABILITIES.clone();
 	
 	public IllusionerUnit(EntityType<? extends Illusioner> pEntityType, Level pLevel) {
 		super(pEntityType, pLevel);
-		this.abilities.add(new MirrorSpellGoal(this));
-		this.abilities.add(new BlindnessSpellGoal(this));
 		updateAbilityButtons();
 	}
 	
@@ -109,6 +120,31 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 	
 	public GenericUntargetedSpellGoal getCastMirrorSpellGoal() {
 		return castMirrorSpellGoal;
+	}
+	
+	@Override
+	public void updateAbilityButtons() {
+		abilities = ABILITIES.clone();
+	}
+	
+	@Override
+	public Object2ObjectArrayMap<Ability, Float> getCooldowns() {
+		return cooldowns;
+	}
+	
+	@Override
+	public boolean hasAutocast(Ability ability) {
+		return autocast == ability;
+	}
+	
+	@Override
+	public void setAutocast(Ability autocast) {
+		this.autocast = autocast;
+	}
+	
+	@Override
+	public Object2ObjectArrayMap<Ability, Integer> getCharges() {
+		return charges;
 	}
 	
 	@Override
@@ -153,11 +189,7 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		return Faction.VILLAGERS;
 	}
 	
-	public List<AbilityButton> getAbilityButtons() {
-		return abilityButtons;
-	}
-	
-	public List<Ability> getAbilities() {
+	public Abilities getAbilities() {
 		return abilities;
 	}
 	
@@ -177,7 +209,7 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		return null;
 	}
 	
-	public UnitBowAttackGoal<? extends LivingEntity> getAttackGoal() {
+	public Goal getAttackGoal() {
 		return attackGoal;
 	}
 	
@@ -267,30 +299,26 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		return maxHealth;
 	}
 	
-	public float getUnitArmorPercentage() {
-		return armorValue;
-	}
-	
 	@Nullable
 	public ResourceCost getCost() {
-		return ResourceCosts.PILLAGER;
+		return SkyUnitResourceCosts.ILLUSIONER;
 	}
 	
 	public boolean canAttackBuildings() {
 		return getAttackBuildingGoal() != null && isPassenger();
 	}
 	
-	public int getFogRevealDuration() {
-		return fogRevealDuration;
-	}
-	
-	public void setFogRevealDuration(int duration) {
-		fogRevealDuration = duration;
-	}
-	
 	@Override
 	public boolean removeWhenFarAway(double d) {
 		return false;
+	}
+	
+	@Nullable
+	public BlindnessSpell getBlindnessSpell() {
+		for (Ability ability : this.getAbilities().get())
+			if (ability instanceof BlindnessSpell blindnessSpell)
+				return blindnessSpell;
+		return null;
 	}
 	
 	public void tick() {
@@ -302,16 +330,14 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		this.castBlindnessSpellGoal.tick();
 		PromoteIllager.checkAndApplyBuff(this);
 		
-		for (Ability ability : getAbilities()) {
-			if (ability instanceof BlindnessSpellGoal blindnessSpellGoal) {
-				if (getTargetGoal() != null) {
-					LivingEntity targetEntity = getTargetGoal().getTarget();
-					if (targetEntity != null && blindnessSpellGoal.isAutocasting() && !isCastingSpell() && blindnessSpellGoal.isOffCooldown() && !level().isClientSide() && tickCount % 4 == 0 && this.distanceTo(targetEntity) <= getAttackRange()) {
-						ability.use(level(), this, targetEntity);
-					}
-				}
+		BlindnessSpell blindnessSpell = getBlindnessSpell();
+		if (blindnessSpell != null && getTargetGoal() != null) {
+			LivingEntity targetEntity = getTargetGoal().getTarget();
+			if (targetEntity != null && blindnessSpell.isAutocasting(this) && !isCastingSpell() && blindnessSpell.isOffCooldown(this) && !level().isClientSide() && tickCount % 4 == 0 && this.distanceTo(targetEntity) <= getAttackRange()) {
+				blindnessSpell.use(level(), this, targetEntity);
 			}
 		}
+		
 	}
 	
 	@Override
@@ -343,7 +369,7 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		this.castBlindnessSpellGoal = new GenericTargetedSpellGoal(
 			this,
 			CAST_BLINDNESS_SPELL_CHANNEL_SECONDS * ResourceCost.TICKS_PER_SECOND,
-			BlindnessSpellGoal.RANGE,
+			BlindnessSpell.RANGE,
 			this::performBlindnessSpellCasting,
 			null,
 			null
@@ -354,19 +380,19 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		if (this.isCastingSpell()) {
 			return VillagerUnitModel.ArmPose.SPELLCASTING;
 		} else {
-			return this.isAggressive() ? VillagerUnitModel.ArmPose.BOW_AND_ARROW :VillagerUnitModel.ArmPose.CROSSED;
+			return this.isAggressive() ? VillagerUnitModel.ArmPose.BOW_AND_ARROW : VillagerUnitModel.ArmPose.CROSSED;
 		}
 	}
 	
 	@Override
 	public boolean isCastingSpell() {
-		for (Ability ability : getAbilities()) {
-			if (ability instanceof MirrorSpellGoal) {
-				if (ability.isOffCooldown() && this.getCastMirrorSpellGoal() != null && this.getCastMirrorSpellGoal().isCasting())
+		for (Ability ability : getAbilities().get()) {
+			if (ability instanceof MirrorSpell) {
+				if (ability.isOffCooldown(this) && this.getCastMirrorSpellGoal() != null && this.getCastMirrorSpellGoal().isCasting())
 					return true;
 			}
-			if (ability instanceof BlindnessSpellGoal) {
-				if (ability.isOffCooldown() && this.getCastBlindnessSpellGoal() != null && this.getCastBlindnessSpellGoal().isCasting())
+			if (ability instanceof BlindnessSpell) {
+				if (ability.isOffCooldown(this) && this.getCastBlindnessSpellGoal() != null && this.getCastBlindnessSpellGoal().isCasting())
 					return true;
 			}
 		}
@@ -381,11 +407,11 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		}
 		
 		
-		for (Ability ability : getAbilities())
-			if (ability instanceof BlindnessSpellGoal blindnessSpellGoal) {
-				blindnessSpellGoal.setToMaxCooldown();
+		for (Ability ability : getAbilities().get())
+			if (ability instanceof BlindnessSpell blindnessSpell) {
+				blindnessSpell.setToMaxCooldown(this);
 				if (!level().isClientSide())
-					AbilityClientboundPacket.sendSetCooldownPacket(getId(), UnitAction.TELEPORT, blindnessSpellGoal.cooldownMax);
+					AbilityClientboundPacket.sendSetCooldownPacket(getId(), UnitAction.TELEPORT, blindnessSpell.cooldownMax);
 			}
 		
 	}
@@ -399,9 +425,9 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		).forEach(unit -> Unit.fullResetBehaviours((Unit) unit));
 		
 		
-		for (Ability ability : getAbilities())
-			if (ability instanceof MirrorSpellGoal)
-				AbilityClientboundPacket.sendSetCooldownPacket(getId(), UnitAction.ROAR, MirrorSpellGoal.CD_MAX_SECONDS);
+		for (Ability ability : getAbilities().get())
+			if (ability instanceof MirrorSpell)
+				AbilityClientboundPacket.sendSetCooldownPacket(getId(), UnitAction.ROAR, MirrorSpell.CD_MAX_SECONDS);
 		
 	}
 	
@@ -410,7 +436,8 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 		if (this.getCastBlindnessSpellGoal() != null)
 			this.castBlindnessSpellGoal.stop();
 		this.castMirrorSpellGoal.stop();
-		if (attackGoal != null && !this.abilities.isEmpty() && this.abilities.get(0).isOffCooldown())
+		BlindnessSpell blindnessSpell = getBlindnessSpell();
+		if (attackGoal != null && blindnessSpell != null && blindnessSpell.isOffCooldown(this))
 			this.attackGoal.resetCooldown();
 		this.getCheckpoints().clear();
 	}
@@ -433,6 +460,14 @@ public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, Ra
 	@Override
 	public void setupEquipmentAndUpgradesServer() {
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
+	}
+	
+	public int getFogRevealDuration() {
+		return fogRevealDuration;
+	}
+	
+	public void setFogRevealDuration(int duration) {
+		fogRevealDuration = duration;
 	}
 	
 	@Override
