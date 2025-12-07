@@ -26,7 +26,7 @@ public abstract class CentralPortalPlacementMixin extends ProductionPlacement im
 	}
 	
 	@Inject(method = "setNetherZone", at = @At("RETURN"), remap = false)
-	private void reload(NetherZone nz, CallbackInfo ci) {
+	private void reload(NetherZone nz, boolean save, CallbackInfo ci) {
 		NetherLavaRiverServerEvent.changeNetherLavaRiver(level);
 	}
 	
