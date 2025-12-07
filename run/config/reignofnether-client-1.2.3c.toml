@@ -1,0 +1,28 @@
+#Player colors
+#- red: 0
+#- blue: 1
+#- cyan: 2
+#- purple: 3
+#- yellow: 4
+#- orange: 5
+#- lime: 6
+#- pink: 7
+#- magenta: 8
+#- light_blue: 9
+#- green: 10
+#- brown: 11
+#- light_gray: 12
+#- gray: 13
+#- black: 14
+#- white: 15
+#- owned: 16
+#- friendly: 17
+#- neutral: 18
+#- hostile: 19
+player_color_self = 16
+player_color_ally = 17
+player_color_neutral = 18
+player_color_enemy = 19
+use_player_colors = false
+camera_sensitivity = 10
+

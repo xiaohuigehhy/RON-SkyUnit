@@ -1,0 +1,45 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.xiaohuige_hhy.skyunit.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "skyunit.refmap.json",
+  "mixins": [
+    "ability.abilities.EnchantMaimingMixin",
+    "ability.abilities.EnchantMultishotMixin",
+    "ability.abilities.EnchantQuickChargeMixin",
+    "ability.abilities.EnchantSharpnessMixin",
+    "building.BuildingBlockMixin",
+    "building.BuildingClientEventsMixin",
+    "building.BuildingPlacementMixin",
+    "building.BuildingServerEventsMixin",
+    "building.buildings.piglins.CentralPortalMixin",
+    "building.buildings.placements.CentralPortalPlacementMixin",
+    "building.buildings.placements.LibraryPlacementMixin",
+    "building.buildings.placements.PortalPlacementMixin",
+    "building.buildings.villagers.LibraryMixin",
+    "healthbars.HealthBarClientEventsMixin",
+    "hud.AbilityButtonMixin",
+    "hud.PortraitRendererUnitMixin",
+    "sandbox.SandboxClientEventsMixin",
+    "sandbox.SandboxServerMixin",
+    "unit.UnitClientEventsMixin",
+    "unit.units.monsters.NecromancerUnitMixin",
+    "unit.units.monsters.SkeletonUnitMixin",
+    "unit.units.monsters.StrayUnitMixin",
+    "unit.units.villagers.PillagerUnitMixin",
+    "unit.units.villagers.VindicatorUnitMixin",
+    "util.MiscUtilMixin",
+    "world.entity.LivingEntityMixin"
+  ],
+  "client": [
+    "config.ConfigClientEventsMixin",
+    "unit.modelling.models.VillagerUnitModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

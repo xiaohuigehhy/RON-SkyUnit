@@ -1,0 +1,26 @@
+{
+  "mappings": {
+    "net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/SkeletonUnitMixin": {
+      "tick": "Lcom/solegendary/reignofnether/unit/units/monsters/SkeletonUnit;m_8119_()V"
+    },
+    "net/xiaohuige_hhy/skyunit/mixin/world/entity/LivingEntityMixin": {
+      "getLastDamageSource": "Lnet/minecraft/world/entity/LivingEntity;m_21225_()Lnet/minecraft/world/damagesource/DamageSource;"
+    },
+    "net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/StrayUnitMixin": {
+      "tick": "Lcom/solegendary/reignofnether/unit/units/monsters/StrayUnit;m_8119_()V"
+    }
+  },
+  "data": {
+    "searge": {
+      "net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/SkeletonUnitMixin": {
+        "tick": "Lcom/solegendary/reignofnether/unit/units/monsters/SkeletonUnit;m_8119_()V"
+      },
+      "net/xiaohuige_hhy/skyunit/mixin/world/entity/LivingEntityMixin": {
+        "getLastDamageSource": "Lnet/minecraft/world/entity/LivingEntity;m_21225_()Lnet/minecraft/world/damagesource/DamageSource;"
+      },
+      "net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/StrayUnitMixin": {
+        "tick": "Lcom/solegendary/reignofnether/unit/units/monsters/StrayUnit;m_8119_()V"
+      }
+    }
+  }
+}

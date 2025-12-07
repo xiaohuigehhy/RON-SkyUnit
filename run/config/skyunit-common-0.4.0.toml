@@ -1,0 +1,31 @@
+
+#SkyUnit Unit cost configurations
+#Villagers
+["Illusioner Config"]
+	"Food cost" = 120
+	"Wood cost" = 80
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 5
+
+["Mysterious Library Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 500
+	"Ore cost" = 200
+	"Time to create" = 140
+	"Population value" = 0
+
+["Narrow Lava River Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 200
+	"Time to create" = 120
+	"Population value" = 0
+
+["Sky Town"]
+	"Food cost" = 0
+	"Wood cost" = 350
+	"Ore cost" = 250
+	"Time to create" = 0
+	"Population value" = 0
+

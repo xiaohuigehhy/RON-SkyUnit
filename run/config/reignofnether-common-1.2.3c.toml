@@ -1,0 +1,886 @@
+
+#Unit cost configurations
+#Monsters
+["Creeper Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 100
+	"Time to create" = 35
+	"Population value" = 2
+
+["Zombie Config"]
+	"Food cost" = 75
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 18
+	"Population value" = 1
+
+["Zombie Villager Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 15
+	"Population value" = 1
+
+["Skeleton Config"]
+	"Food cost" = 50
+	"Wood cost" = 45
+	"Ore cost" = 0
+	"Time to create" = 18
+	"Population value" = 1
+
+["Stray Config"]
+	"Food cost" = 50
+	"Wood cost" = 45
+	"Ore cost" = 0
+	"Time to create" = 18
+	"Population value" = 1
+
+["Husk Config"]
+	"Food cost" = 75
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 18
+	"Population value" = 1
+
+["Drowned Config"]
+	"Food cost" = 75
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 18
+	"Population value" = 1
+
+["Spider Config"]
+	"Food cost" = 90
+	"Wood cost" = 25
+	"Ore cost" = 25
+	"Time to create" = 25
+	"Population value" = 2
+
+["Poison Spider Config"]
+	"Food cost" = 90
+	"Wood cost" = 25
+	"Ore cost" = 25
+	"Time to create" = 25
+	"Population value" = 2
+
+["Slime Config"]
+	"Food cost" = 40
+	"Wood cost" = 40
+	"Ore cost" = 40
+	"Time to create" = 25
+	"Population value" = 2
+
+["Warden Config"]
+	"Food cost" = 275
+	"Wood cost" = 0
+	"Ore cost" = 125
+	"Time to create" = 50
+	"Population value" = 5
+
+["Zombie Piglin Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 10
+	"Population value" = 1
+
+["Zoglin Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 10
+	"Population value" = 2
+
+["Necromancer Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+["Wretched Wraith Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+#Villagers
+["Villager Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 15
+	"Population value" = 1
+
+["Militia Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 15
+	"Population value" = 1
+
+["Iron Golem Config"]
+	"Food cost" = 0
+	"Wood cost" = 50
+	"Ore cost" = 250
+	"Time to create" = 45
+	"Population value" = 4
+
+["Pillager Config"]
+	"Food cost" = 120
+	"Wood cost" = 80
+	"Ore cost" = 0
+	"Time to create" = 32
+	"Population value" = 3
+
+["Vindicator Config"]
+	"Food cost" = 170
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 32
+	"Population value" = 3
+
+["Witch Config"]
+	"Food cost" = 90
+	"Wood cost" = 90
+	"Ore cost" = 90
+	"Time to create" = 35
+	"Population value" = 3
+
+["Evoker Config"]
+	"Food cost" = 150
+	"Wood cost" = 0
+	"Ore cost" = 120
+	"Time to create" = 35
+	"Population value" = 3
+
+["Ravager Config"]
+	"Food cost" = 400
+	"Wood cost" = 50
+	"Ore cost" = 150
+	"Time to create" = 60
+	"Population value" = 7
+
+["Royal Guard Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+["Enchanter Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+#Piglins
+["Grunt Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 15
+	"Population value" = 1
+
+["Brute Config"]
+	"Food cost" = 120
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 25
+	"Population value" = 2
+
+["Headhunter Config"]
+	"Food cost" = 90
+	"Wood cost" = 60
+	"Ore cost" = 0
+	"Time to create" = 25
+	"Population value" = 2
+
+["Hoglin Config"]
+	"Food cost" = 140
+	"Wood cost" = 0
+	"Ore cost" = 70
+	"Time to create" = 35
+	"Population value" = 3
+
+["Blaze Config"]
+	"Food cost" = 40
+	"Wood cost" = 40
+	"Ore cost" = 100
+	"Time to create" = 30
+	"Population value" = 2
+
+["Wither Skeleton Config"]
+	"Food cost" = 200
+	"Wood cost" = 0
+	"Ore cost" = 125
+	"Time to create" = 40
+	"Population value" = 4
+
+["Ghast Config"]
+	"Food cost" = 100
+	"Wood cost" = 100
+	"Ore cost" = 250
+	"Time to create" = 60
+	"Population value" = 6
+
+["Magma Cube Config"]
+	"Food cost" = 40
+	"Wood cost" = 40
+	"Ore cost" = 40
+	"Time to create" = 25
+	"Population value" = 2
+
+["Piglin Merchant Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+["Wildfire Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+["Enderman Config"]
+	"Food cost" = 75
+	"Wood cost" = 75
+	"Ore cost" = 75
+	"Time to create" = 35
+	"Population value" = 3
+
+["Polar Bear Config"]
+	"Food cost" = 250
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 40
+	"Population value" = 4
+
+["Grizzly Bear Config"]
+	"Food cost" = 250
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 40
+	"Population value" = 4
+
+["Panda Config"]
+	"Food cost" = 250
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 40
+	"Population value" = 4
+
+["Wolf Config"]
+	"Food cost" = 120
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 25
+	"Population value" = 2
+
+["Llama Config"]
+	"Food cost" = 180
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 25
+	"Population value" = 2
+
+["Hero Base Revive Cost Config"]
+	"Food cost" = 100
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 5
+
+["Hero Extra Revive Cost Per Level Config"]
+	"Food cost" = 50
+	"Wood cost" = 0
+	"Ore cost" = 0
+	"Time to create" = 5
+	"Population value" = 0
+
+#Building Cost Configurations
+["Beacon Config"]
+	"Food cost" = 0
+	"Wood cost" = 500
+	"Ore cost" = 500
+	"Time to create" = 0
+	"Population value" = 0
+
+["Stockpile Config"]
+	"Food cost" = 0
+	"Wood cost" = 75
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Oak Bridge Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Spruce Bridge Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Blackstone Bridge Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 100
+	"Time to create" = 0
+	"Population value" = 0
+
+#Monsters
+["Mausoleum Config"]
+	"Food cost" = 0
+	"Wood cost" = 350
+	"Ore cost" = 250
+	"Time to create" = 0
+	"Population value" = 10
+
+["Haunted House Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 10
+
+["Pumpkin Farm Config"]
+	"Food cost" = 0
+	"Wood cost" = 200
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Sculk Catalyst Config"]
+	"Food cost" = 0
+	"Wood cost" = 125
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Graveyard Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Spider Lair Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 75
+	"Time to create" = 0
+	"Population value" = 0
+
+["Dungeon Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 75
+	"Time to create" = 0
+	"Population value" = 0
+
+["Laboratory Config"]
+	"Food cost" = 0
+	"Wood cost" = 250
+	"Ore cost" = 150
+	"Time to create" = 0
+	"Population value" = 0
+
+["Dark Watchtower Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 75
+	"Time to create" = 0
+	"Population value" = 0
+
+["Slime Pit Config"]
+	"Food cost" = 0
+	"Wood cost" = 175
+	"Ore cost" = 125
+	"Time to create" = 0
+	"Population value" = 0
+
+["Stronghold Config"]
+	"Food cost" = 0
+	"Wood cost" = 400
+	"Ore cost" = 300
+	"Time to create" = 0
+	"Population value" = 0
+
+["Altar of Darkness Config"]
+	"Food cost" = 0
+	"Wood cost" = 125
+	"Ore cost" = 50
+	"Time to create" = 0
+	"Population value" = 0
+
+#Villagers
+["Town Centre Config"]
+	"Food cost" = 0
+	"Wood cost" = 350
+	"Ore cost" = 250
+	"Time to create" = 0
+	"Population value" = 10
+
+["Villager House Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 10
+
+["Wheat Farm Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Barracks Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Blacksmith Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 300
+	"Time to create" = 0
+	"Population value" = 0
+
+["Arcane Tower Config"]
+	"Food cost" = 0
+	"Wood cost" = 200
+	"Ore cost" = 100
+	"Time to create" = 0
+	"Population value" = 0
+
+["Library Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 100
+	"Time to create" = 0
+	"Population value" = 0
+
+["Watchtower Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 75
+	"Time to create" = 0
+	"Population value" = 0
+
+["Castle Config"]
+	"Food cost" = 0
+	"Wood cost" = 400
+	"Ore cost" = 300
+	"Time to create" = 0
+	"Population value" = 0
+
+["Iron Golem Building Config"]
+	"Food cost" = 0
+	"Wood cost" = 50
+	"Ore cost" = 250
+	"Time to create" = 0
+	"Population value" = 0
+
+["Shrine of Prosperity Config"]
+	"Food cost" = 0
+	"Wood cost" = 125
+	"Ore cost" = 50
+	"Time to create" = 0
+	"Population value" = 0
+
+#Piglins
+["Central Portal Config"]
+	"Food cost" = 0
+	"Wood cost" = 350
+	"Ore cost" = 250
+	"Time to create" = 0
+	"Population value" = 10
+
+["Basic Portal Config"]
+	"Food cost" = 0
+	"Wood cost" = 75
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Civilian Portal Config"]
+	"Food cost" = 0
+	"Wood cost" = 75
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 15
+
+["Netherwart Farm Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 0
+	"Time to create" = 0
+	"Population value" = 0
+
+["Bastion Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 100
+	"Time to create" = 0
+	"Population value" = 0
+
+["Hoglin Stables Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 50
+	"Time to create" = 0
+	"Population value" = 0
+
+["Flame Sanctuary Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 200
+	"Time to create" = 0
+	"Population value" = 0
+
+["Wither Shrine Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 200
+	"Time to create" = 0
+	"Population value" = 0
+
+["Basalt Springs Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 200
+	"Time to create" = 0
+	"Population value" = 0
+
+["Fortress Config"]
+	"Food cost" = 0
+	"Wood cost" = 400
+	"Ore cost" = 300
+	"Time to create" = 0
+	"Population value" = 0
+
+["Infernal Portal Config"]
+	"Food cost" = 0
+	"Wood cost" = 125
+	"Ore cost" = 50
+	"Time to create" = 0
+	"Population value" = 0
+
+#Research Cost Configurations
+["Golem Smithing Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 150
+	"Ore cost" = 200
+	"Time to create" = 90
+	"Population value" = 0
+
+["Militia Bows Research Config"]
+	"Food cost" = 250
+	"Wood cost" = 500
+	"Ore cost" = 0
+	"Time to create" = 160
+	"Population value" = 0
+
+["Lightning Lab Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 400
+	"Time to create" = 120
+	"Population value" = 0
+
+["Stockpile Resource Capacity Research Config"]
+	"Food cost" = 200
+	"Wood cost" = 200
+	"Ore cost" = 0
+	"Time to create" = 90
+	"Population value" = 0
+
+["Spider Jockey Research Config"]
+	"Food cost" = 300
+	"Wood cost" = 250
+	"Ore cost" = 0
+	"Time to create" = 100
+	"Population value" = 0
+
+["Spider Webs Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 300
+	"Time to create" = 140
+	"Population value" = 0
+
+["Poison Spider Research Config"]
+	"Food cost" = 400
+	"Wood cost" = 0
+	"Ore cost" = 250
+	"Time to create" = 150
+	"Population value" = 0
+
+["Husk Research Config"]
+	"Food cost" = 500
+	"Wood cost" = 0
+	"Ore cost" = 500
+	"Time to create" = 200
+	"Population value" = 0
+
+["Drowned Research Config"]
+	"Food cost" = 500
+	"Wood cost" = 0
+	"Ore cost" = 500
+	"Time to create" = 200
+	"Population value" = 0
+
+["Stray Research Config"]
+	"Food cost" = 500
+	"Wood cost" = 500
+	"Ore cost" = 0
+	"Time to create" = 200
+	"Population value" = 0
+
+["Slime Conversion Research Config"]
+	"Food cost" = 300
+	"Wood cost" = 0
+	"Ore cost" = 300
+	"Time to create" = 140
+	"Population value" = 0
+
+["Extended Lingering Potion Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 250
+	"Ore cost" = 250
+	"Time to create" = 140
+	"Population value" = 0
+
+["Healing Potion Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 350
+	"Ore cost" = 350
+	"Time to create" = 180
+	"Population value" = 0
+
+["Water Potion Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 250
+	"Ore cost" = 250
+	"Time to create" = 140
+	"Population value" = 0
+
+["Evoker Vex Research Config"]
+	"Food cost" = 500
+	"Wood cost" = 0
+	"Ore cost" = 300
+	"Time to create" = 120
+	"Population value" = 0
+
+["Captain Banner Research Config"]
+	"Food cost" = 200
+	"Wood cost" = 150
+	"Ore cost" = 150
+	"Time to create" = 90
+	"Population value" = 0
+
+["Grand Library Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 200
+	"Ore cost" = 100
+	"Time to create" = 140
+	"Population value" = 0
+
+["Silverfish Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 300
+	"Time to create" = 120
+	"Population value" = 0
+
+["Sculk Amplifier Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 200
+	"Ore cost" = 400
+	"Time to create" = 150
+	"Population value" = 0
+
+["Ravager Artillery Research Config"]
+	"Food cost" = 400
+	"Wood cost" = 0
+	"Ore cost" = 350
+	"Time to create" = 140
+	"Population value" = 0
+
+["Brute Shields Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 300
+	"Time to create" = 150
+	"Population value" = 0
+
+["Hoglin Cavalry Research Config"]
+	"Food cost" = 350
+	"Wood cost" = 300
+	"Ore cost" = 0
+	"Time to create" = 120
+	"Population value" = 0
+
+["Heavy Tridents Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 300
+	"Time to create" = 150
+	"Population value" = 0
+
+["Blaze Fire Wall Research Config"]
+	"Food cost" = 400
+	"Wood cost" = 0
+	"Ore cost" = 300
+	"Time to create" = 150
+	"Population value" = 0
+
+["Fire Resistance Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 200
+	"Ore cost" = 200
+	"Time to create" = 100
+	"Population value" = 0
+
+["Wither Clouds Research Config"]
+	"Food cost" = 250
+	"Wood cost" = 0
+	"Ore cost" = 350
+	"Time to create" = 150
+	"Population value" = 0
+
+["Bloodlust Research Config"]
+	"Food cost" = 250
+	"Wood cost" = 250
+	"Ore cost" = 250
+	"Time to create" = 150
+	"Population value" = 0
+
+["Advanced Portals Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 300
+	"Ore cost" = 300
+	"Time to create" = 150
+	"Population value" = 0
+
+["Civilian Portal Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 75
+	"Ore cost" = 0
+	"Time to create" = 20
+	"Population value" = 0
+
+["Military Portal Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 100
+	"Ore cost" = 0
+	"Time to create" = 25
+	"Population value" = 0
+
+["Transport Portal Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 175
+	"Ore cost" = 0
+	"Time to create" = 30
+	"Population value" = 0
+
+["Cube Magma Research Config"]
+	"Food cost" = 300
+	"Wood cost" = 0
+	"Ore cost" = 300
+	"Time to create" = 140
+	"Population value" = 0
+
+["Soul Fireballs Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 250
+	"Ore cost" = 250
+	"Time to create" = 120
+	"Population value" = 0
+
+["Beacon Level 1 Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 200
+	"Time to create" = 120
+	"Population value" = 0
+
+["Beacon Level 2 Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 300
+	"Time to create" = 120
+	"Population value" = 0
+
+["Beacon Level 3 Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 400
+	"Time to create" = 120
+	"Population value" = 0
+
+["Beacon Level 4 Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 500
+	"Time to create" = 120
+	"Population value" = 0
+
+["Beacon Level 5 Research Config"]
+	"Food cost" = 0
+	"Wood cost" = 0
+	"Ore cost" = 600
+	"Time to create" = 120
+	"Population value" = 0
+
+#Enchantment Cost Configurations
+["Maiming Enchantment Config"]
+	"Food cost" = 0
+	"Wood cost" = 20
+	"Ore cost" = 30
+	"Time to create" = 0
+	"Population value" = 0
+
+["Quick Charge Enchantment Config"]
+	"Food cost" = 0
+	"Wood cost" = 40
+	"Ore cost" = 20
+	"Time to create" = 0
+	"Population value" = 0
+
+["Sharpness Enchantment Config"]
+	"Food cost" = 0
+	"Wood cost" = 40
+	"Ore cost" = 60
+	"Time to create" = 0
+	"Population value" = 0
+
+["Multishot Enchantment Config"]
+	"Food cost" = 0
+	"Wood cost" = 70
+	"Ore cost" = 35
+	"Time to create" = 0
+	"Population value" = 0
+
+["Vigor Enchantment Config"]
+	"Food cost" = 0
+	"Wood cost" = 60
+	"Ore cost" = 60
+	"Time to create" = 0
+	"Population value" = 0
+
