@@ -28,7 +28,7 @@ public class BuildingServerEventsMixin {
 	@Shadow
 	private static ServerLevel serverLevel;
 	
-	@Inject(method = "lambda$loadBuildingsAndNetherZones$1", at = @At(value = "INVOKE", target = "Lcom/solegendary/reignofnether/building/BuildingPlacement;changeStructure(Ljava/lang/String;)V", ordinal = 2), locals = LocalCapture.CAPTURE_FAILHARD, remap = false, cancellable = true)
+	@Inject(method = "lambda$loadBuildingsAndNetherZones$2", at = @At(value = "INVOKE", target = "Lcom/solegendary/reignofnether/building/BuildingPlacement;changeStructure(Ljava/lang/String;)V", ordinal = 2), locals = LocalCapture.CAPTURE_FAILHARD, remap = false, cancellable = true)
 	private static void loadLibrary(ServerLevel level, NetherZoneSaveData netherData, ArrayList<BlockPos> placedNZs, @NotNull BuildingSave b, CallbackInfo ci, BuildingPlacement building) {
 		if (b.upgradeLevel == 2) {
 			building.changeStructure(ResearchMysteriousLibrary.mysteriousStructureName);
