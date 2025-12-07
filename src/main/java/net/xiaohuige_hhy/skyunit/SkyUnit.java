@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 public class SkyUnit {
 	
 	public static final String MOD_ID = "skyunit";
-	public static final String VERSION_STRING = "0.4.2-beta";
+	public static final String VERSION_STRING = "0.4.0";
 	public static final Logger LOGGER = LogUtils.getLogger();
 	
 	public SkyUnit(FMLJavaModLoadingContext mlctx) {
