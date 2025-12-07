@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class NetherLavaRiverServerEvent {
-	
+
 	public static final int VISIBLE_BORDER_ADJ = 2;
 	public static final ArrayList<NetherZone> availableNetherZones = new ArrayList<>();
 	private static final int NETHER_LAVA_RIVER_SOURCES_UPDATE_TICKS_MAX = 50;
@@ -33,35 +33,35 @@ public class NetherLavaRiverServerEvent {
 	public static Map<BlockPos, BlockState> netherLavaRiverBlocks = new HashMap<>();
 	//	public static Map<BlockPos, BlockState> prenetherLavaRiverBlocks = new HashMap<>();
 	private static int netherLavaRiverSourcesUpdateTicks = NETHER_LAVA_RIVER_SOURCES_UPDATE_TICKS_MAX;
-	
+
 	public static void setNetherLavaRiverSources() {
-		
+
 		netherLavaRiverSourcesUpdateTicks -= 1;
 		if (netherLavaRiverSourcesUpdateTicks <= 0) {
 			netherLavaRiverSourcesUpdateTicks = NETHER_LAVA_RIVER_SOURCES_UPDATE_TICKS_MAX;
-			
+
 			netherLavaRiverSourceOrigins.clear();
 			availableNetherZones.clear();
-			
+
 			for (BuildingPlacement building : BuildingClientEvents.getBuildings()) {
 				if (!ResearchServerEvents.playerHasResearch(building.ownerName, SkyUnitProductionItems.RESEARCH_NARROW_LAVA_RIVER)) {
 					continue;
 				}
-				
+
 				if (!building.isExploredClientside || !(building instanceof NetherConvertingBuilding ncb)) {
 					continue;
 				}
-				netherLavaRiverSourceOrigins.add(new Pair<>(building.centrePos, (int) ncb.getMaxRange() - VISIBLE_BORDER_ADJ));
-				availableNetherZones.add(ncb.getZone());
+//				netherLavaRiverSourceOrigins.add(new Pair<>(building.centrePos, (int) ncb.getMaxRange() - VISIBLE_BORDER_ADJ));
+//				availableNetherZones.add(ncb.getZone());
 			}
 		}
 	}
-	
+
 	public static void changeNetherLavaRiver(@NotNull Level level) {
 		if (level.isClientSide)
 			return;
-		
-		
+
+
 		Set<BlockPos> currentPositions = new HashSet<>();
 		for (NetherZone netherZone : availableNetherZones) {
 			if (netherZone != null && !netherZone.isRestoring())
@@ -127,13 +127,13 @@ public class NetherLavaRiverServerEvent {
 //		}
 //		return null;
 //	}
-	
+
 	public static @NotNull Set<BlockPos> getRangeIndicatorCircleBlocks(BlockPos centrePos, int radius, Level level) {
 		if (radius <= 0)
 			return Set.of();
-		
+
 		ArrayList<BlockPos> bps = new ArrayList<>();
-		
+
 		Set<BlockPos> netherLavaRiverCircleBps;
 		netherLavaRiverCircleBps = MiscUtil.CircleUtil.getCircleWithCulledOverlaps(centrePos, radius, netherLavaRiverSourceOrigins);
 		for (BlockPos bp : netherLavaRiverCircleBps) {
@@ -144,11 +144,11 @@ public class NetherLavaRiverServerEvent {
 					x += 1;
 				else if (i == 2)
 					z += 1;
-				
+
 				int groundY = level.getHeight(Heightmap.Types.MOTION_BLOCKING, x, z) - 1;
 				BlockPos topBp = new BlockPos(x, groundY, z);
 				bps.add(topBp);
-				
+
 				int y = 1;
 				if (level.getBlockState(topBp).getBlock() instanceof LeavesBlock) {
 					BlockPos bottomBp;
@@ -165,6 +165,6 @@ public class NetherLavaRiverServerEvent {
 		}
 		return new HashSet<>(bps);
 	}
-	
-	
+
+
 }
