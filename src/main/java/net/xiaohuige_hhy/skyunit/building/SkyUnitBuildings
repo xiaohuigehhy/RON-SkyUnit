@@ -1,0 +1,9 @@
+public class Buildings {
+    public static final SkyTown SKYTOWN = register(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "skytown"), new SkyTown());
+
+    private static <T extends Building> T register(ResourceLocation id, T building) {
+        return Registry.register(ReignOfNetherRegistries.BUILDING, id, building);
+    }
+
+    public static void init() {}
+}
