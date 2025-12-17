@@ -27,6 +27,11 @@ public class SkyUnitEntityRegistrar {
 			.sized(EntityType.ILLUSIONER.getWidth(), EntityType.ILLUSIONER.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
 			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "illusioner_unit").toString()));
+	public static final RegistryObject<EntityType<ParrotUnit>> PARROT_UNIT = ENTITIES.register("parrot_unit", 
+		() -> EntityType.Builder.of(ParrotUnit::new, MobCategory.CREATURE)
+			.sized(EntityType.PARROT.getWidth(), EntityType.PARROT.getHeight())
+			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
+			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "parrot_unit").toString()));
 	
 	public static void init(FMLJavaModLoadingContext context) {
 		ENTITIES.register(context.getModEventBus());
@@ -36,6 +41,7 @@ public class SkyUnitEntityRegistrar {
 		return switch (unitName) {
 			case "Skeleton Horse" -> SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get();
 			case IllusionerProd.itemName -> SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get();
+			case ParrotProd.itemName -> SkyUnitEntityRegistrar.PARROT_UNIT.get();
 			default -> null;
 		};
 	}

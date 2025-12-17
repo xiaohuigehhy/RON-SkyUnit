@@ -32,12 +32,14 @@ public class SkyUnitCommonModEvents {
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers evt) {
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonRenderer::new);
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerRenderer::new);
+		evt.registerEntityRenderer(SkyUnitEntityRegistrar.PARROT_UNIT.get(). ParrotRenderer::new);
 	}
 	
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent evt) {
 		evt.put(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonUnit.createAttributes().build());
 		evt.put(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerUnit.createAttributes().build());
+		evt.put(SkyUnitEntityRegistrar.PARROT_UNIT.get(). ParrotUnit.createAttributes.build());
 	}
 	
 	@SubscribeEvent
@@ -50,6 +52,7 @@ public class SkyUnitCommonModEvents {
 		if (BuiltInRegistries.CREATIVE_MODE_TAB.getKey(event.getTab()) == CreativeModeTabs.SPAWN_EGGS.location()) {
 			event.accept(SkyUnitItemRegistrar.SKELETON_HORSE_SUMMON_UNIT);
 			event.accept(SkyUnitItemRegistrar.ILLUSIONER_UNIT);
+			event.accept(SkyUnitItemRegistrar.PARROT_UNIT);
 		}
 	}
 }
