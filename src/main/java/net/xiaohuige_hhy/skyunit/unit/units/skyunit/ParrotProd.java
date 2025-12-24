@@ -4,7 +4,7 @@ import com.solegendary.reignofnether.building.production.ProductionItem;
 import com.solegendary.reignofnether.building.production.StartProductionButton;
 import com.solegendary.reignofnether.building.production.StopProductionButton;
 import com.solegendary.reignofnether.resources.ResourceCost;
-import com.solegendary.reignofnether.unit.units.piglins.GruntProd;
+import com.solegendary.reignofnether.unit.units.skyunit.GruntProd;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -14,7 +14,7 @@ import net.xiaohuige_hhy.skyunit.SkyUnit;
 public class ParrotProd extends ProductionItem {
 
    public final static String itemName = "Parrot";
-   public final static ResourceCost cost = ResourceCosts.PARROT;
+   public final static SkyUnitResourceCost cost = SkyUnitResourceCosts.PARROT;
 
    public ParrotProd() {
        super(cost);
@@ -31,29 +31,29 @@ public class ParrotProd extends ProductionItem {
    public UnitSpawnButton getPlaceButton() {
        return new UnitSpawnButton(
                itemName,
-               ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/parrot.png"),
+               ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/parrot.png"),
                List.of(
-                       FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot"), Style.EMPTY.withBold(true)),
+                       FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot"), Style.EMPTY.withBold(true)),
                        FormattedCharSequence.forward("", Style.EMPTY),
-                       FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot.tooltip1"), Style.EMPTY),
-                       FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot.tooltip2"), Style.EMPTY)
+                       FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot.tooltip1"), Style.EMPTY),
+                       FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot.tooltip2"), Style.EMPTY)
                )
        );
    }
 
    public StartProductionButton getStartButton(ProductionPlacement prodBuilding, Keybinding hotkey) {
        List<FormattedCharSequence> tooltipLines = new ArrayList<>(List.of(
-           FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot"), Style.EMPTY.withBold(true)),
+           FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot"), Style.EMPTY.withBold(true)),
            ResourceCosts.getFormattedCost(cost),
            ResourceCosts.getFormattedPopAndTime(cost),
            FormattedCharSequence.forward("", Style.EMPTY),
-           FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot.tooltip1"), Style.EMPTY),
-           FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.parrot.tooltip2"), Style.EMPTY)
+           FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot.tooltip1"), Style.EMPTY),
+           FormattedCharSequence.forward(I18n.get("units.skyunit.reignofnether.parrot.tooltip2"), Style.EMPTY)
        ));
 
        return new StartProductionButton(
            GruntProd.itemName,
-           ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/parrot.png"),
+           ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/parrot.png"),
            hotkey,
            () -> false,
            () -> true,
