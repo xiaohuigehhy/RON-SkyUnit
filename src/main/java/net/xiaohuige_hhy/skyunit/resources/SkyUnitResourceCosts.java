@@ -13,12 +13,14 @@ public class SkyUnitResourceCosts {
 	public static final ResourceCost RESEARCH_MYSTERIOUS_LIBRARY = new ResourceCost(ID, "RESEARCH_MYSTERIOUS_LIBRARY");
 	public static final ResourceCost RESEARCH_NARROW_LAVA_RIVER = new ResourceCost(ID, "RESEARCH_LAVA_RIVER");
 	public static final ResourceCost SKY_TOWN = new ResourceCost(ID, "SKY_TOWN");
+	public static final ResourceCost Parrot = new ResourceCost(ID, "PARROT");
 	
 	public static void deferredLoadResourceCosts() {
 		ILLUSIONER.bakeValues(SkyUnitCommonConfigs.UnitCosts.ILLUSIONER);
 		RESEARCH_MYSTERIOUS_LIBRARY.bakeValues(SkyUnitCommonConfigs.ResearchCosts.RESEARCH_MYSTERIOUS_LIBRARY);
 		RESEARCH_NARROW_LAVA_RIVER.bakeValues(SkyUnitCommonConfigs.ResearchCosts.RESEARCH_NARROW_LAVA_RIVER);
 		SKY_TOWN.bakeValues(SkyUnitCommonConfigs.ResearchCosts.SKY_TOWN);
+		PARROT
 	}
 	
 }
