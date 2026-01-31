@@ -26,9 +26,6 @@ public class MirrorSpell extends Ability {
 	
 	public MirrorSpell() {
 		super(UnitAction.ROAR, CD_MAX_SECONDS * ResourceCost.TICKS_PER_SECOND, 0, 0, true, false);
-		
-		this.autocastEnableAction = UnitAction.SPIN_WEBS_AUTOCAST_ENABLE;
-		this.autocastDisableAction = UnitAction.SPIN_WEBS_AUTOCAST_DISABLE;
 	}
 	
 	@Override

@@ -4,8 +4,8 @@ import com.solegendary.reignofnether.ability.Abilities;
 import com.solegendary.reignofnether.ability.Ability;
 import com.solegendary.reignofnether.ability.AbilityClientboundPacket;
 import com.solegendary.reignofnether.ability.HeroAbility;
-import com.solegendary.reignofnether.ability.heroAbilities.monster.InsomniaCurse;
-import com.solegendary.reignofnether.ability.heroAbilities.monster.SoulSiphonPassive;
+import com.solegendary.reignofnether.ability.heroAbilities.necromancer.InsomniaCurse;
+import com.solegendary.reignofnether.ability.heroAbilities.necromancer.SoulSiphonPassive;
 import com.solegendary.reignofnether.unit.UnitAction;
 import com.solegendary.reignofnether.unit.UnitAnimationAction;
 import com.solegendary.reignofnether.unit.goals.GarrisonGoal;
@@ -123,9 +123,6 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	public abstract int consumeSoulsAndGetSoulRank();
 	
 	@Shadow(remap = false)
-	public abstract SoulSiphonPassive getSoulSiphon();
-	
-	@Shadow(remap = false)
 	public abstract void initialiseGoals();
 	
 	@Shadow
@@ -136,6 +133,8 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 	
 	@Shadow
 	public abstract Object2ObjectArrayMap<HeroAbility, Integer> getHeroAbilityRanks();
+	
+	@Shadow public abstract SoulSiphonPassive getSoulSiphon();
 	
 	@Unique
 	private void SkyUnit$summonSkeletonHorseEntity(LivingEntity targetEntity) {
@@ -182,7 +181,7 @@ public abstract class NecromancerUnitMixin extends Skeleton {
 				SoulSiphonPassive soulSiphon = getSoulSiphon();
 				float soul = 1.0F;
 				if (soulSiphon != null && hasAutocast(soulSiphon) && this.souls > 0) {
-					soul = soulSiphon.soulsPerCast;
+					soul = Math.min(soulSiphon.soulsPerCast, this.souls);
 				}
 				for (int i = 0; i < soul / 2; ++i) {
 					double x = this.getX();

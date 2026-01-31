@@ -10,6 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xiaohuige_hhy.skyunit.SkyUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotProd;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerProd;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerUnit;
 
@@ -27,7 +29,7 @@ public class SkyUnitEntityRegistrar {
 			.sized(EntityType.ILLUSIONER.getWidth(), EntityType.ILLUSIONER.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
 			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "illusioner_unit").toString()));
-	public static final RegistryObject<EntityType<ParrotUnit>> PARROT_UNIT = ENTITIES.register("parrot_unit", 
+	public static final RegistryObject<EntityType<ParrotUnit>> PARROT_UNIT = ENTITIES.register("parrot_unit",
 		() -> EntityType.Builder.of(ParrotUnit::new, MobCategory.CREATURE)
 			.sized(EntityType.PARROT.getWidth(), EntityType.PARROT.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)

@@ -8,256 +8,119 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="758ecb0b-dd08-4f77-b7be-7ed5b7742e2a" name="更改" comment="修复gitignore">
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/expanded/expanded.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.12/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/SkyUnit.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/SkyUnit.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/runData.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/runGameTestServer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/_2025_11_15_19_39____.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_RenameSrg2Mcp_-1543310455/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_applyBinpatches_2/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_applyBinpatches_3/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_atJar_4/accesstransform.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_atJar_4/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_atJar_4/parent_at.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/_compileJava_3/mcp/client/Start.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit$ClientModEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnitCommonModEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/BlindnessSpell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/MirrorSpell.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/PromoteIllusioner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/VanguardCharge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/blocks/LavaRiverBlock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/building/production/SkyUnitProductionItems.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$Costs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$ResearchCosts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$UnitCosts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/ability/abilities/EnchantMaimingMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/ability/abilities/EnchantMultishotMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/ability/abilities/EnchantQuickChargeMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/ability/abilities/EnchantSharpnessMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingBlockMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingClientEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingPlacementMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingServerEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/buildings/piglins/CentralPortalMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/buildings/placements/CentralPortalPlacementMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/buildings/placements/LibraryPlacementMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/buildings/placements/PortalPlacementMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/buildings/villagers/LibraryMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/config/ConfigClientEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/healthbars/HealthBarClientEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/hud/AbilityButtonMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/hud/PortraitRendererUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxClientEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxServerMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/UnitClientEventsMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/modelling/models/VillagerUnitModelMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/NecromancerUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/SkeletonUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/StrayUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/villagers/PillagerUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/villagers/VindicatorUnitMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/util/MiscUtilMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/world/entity/LivingEntityMixin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/nether/NetherLavaRiverServerEvent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitBlockRegistrar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitEntityRegistrar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitItemRegistrar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/research/researchItems/ResearchMysteriousLibrary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/research/researchItems/ResearchNarrowLavaRiver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/resources/SkyUnitResourceCosts.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/SkyUnitUnitServerEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/SkeletonHorseSummonRenderer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/monsters/SkeletonHorseSummonUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerProd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classpath/runData_minecraftClasspath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classpath/runGameTestServer_minecraftClasspath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/createMcpToSrg/output.tsrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/createSrgToMcp/output.srg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/downloadMcpConfig/output.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/extractSrg/output.srg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/srg_to_parchment_2023.09.03-1.20.1.tsrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/srg_to_parchment_2023.09.03-1.20.1.tsrg.input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-binpatched.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-binpatches.lzma" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-binpatches.lzma.input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-inject_src.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-injected.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0/forge-1.20.1-47.4.0-srg.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar.input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar.sha1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.pom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.pom.input" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/fg_cache/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.pom.sha1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.4.1-alpha.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.4.2-alpha-hotfix3.jar.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-0.4.2-alpha-hotfix4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/skyunit-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/META-INF/accesstransformer.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/lang/en_us.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/lang/zh_cn.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/structures/library_mysterious.nbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/block/lava_river_block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/block/lava_river_block.png.mcmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/illusioner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/blockstates/lava_river_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/lang/en_us.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/lang/zh_cn.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/models/block/lava_river_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/models/item/illusioner_unit_spawn_egg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/models/item/lava_river_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/models/item/skeleton_horse_summon_unit_spawn_egg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/block/lava_river_block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/block/lava_river_block.png.mcmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/illusioner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/data/reignofnether/structures/library_mysterious.nbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/pack.mcmeta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/skyunit.mixins.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_e38c7b1572572a9143f4c4d90e354b25/mcp/client/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileJava-mappings.tsrg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileJava-refmap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/skyunit.refmap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2025-08-08-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2025-08-08-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/DIM-1/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/DIM-1/data/raids.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/DIM1/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/DIM1/data/raids_end.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/advancements/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/advancements/61c74d33-25c5-3867-a8d9-8de5a235d5df.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/advancements/ed1a78aa-2e1c-4929-a9e1-29a54dc2649d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/essential-mod-partner/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/essential-mod-partner/data.cache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/fml.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/forge-client.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/reignofnether-client-1.2.3c.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/reignofnether-common-1.2.3c.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/config/skyunit-common-0.4.0.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2025-12-07_18.06.01-client.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2025-12-07_18.10.16-client.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/crash-reports/crash-2025-12-07_18.11.13-client.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/capabilities.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/chunks.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/raids.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/random_sequences.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-building-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-herounit-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-netherzone-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-research-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-resources-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-rtsplayer-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-survival-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/data/saved-target-resources-data.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.-1.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/entities/r.0.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/generated/minecraft/structures/library_mysterious.nbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/generated/skyunit/structures/library_mysterious.nbt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/level.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/level.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/2025-12-07-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/2025-12-07-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/2025-12-07-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/61c74d33-25c5-3867-a8d9-8de5a235d5df.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/61c74d33-25c5-3867-a8d9-8de5a235d5df.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/ed1a78aa-2e1c-4929-a9e1-29a54dc2649d.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/playerdata/ed1a78aa-2e1c-4929-a9e1-29a54dc2649d.dat_old" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-1.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-2.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-2.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.-2.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/poi/r.0.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-1.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-1.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-2.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-2.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.-2.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.0.-1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.0.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.0.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.1.0.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/region/r.1.1.mca" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/serverconfig/forge-server.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/session.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/stats/61c74d33-25c5-3867-a8d9-8de5a235d5df.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run/stats/ed1a78aa-2e1c-4929-a9e1-29a54dc2649d.json" afterDir="false" />
+    <list default="true" id="758ecb0b-dd08-4f77-b7be-7ed5b7742e2a" name="更改" comment="更新SkyUnit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/buildings/SkyUnitBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/hud/SkyUnitHudClientEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/hud/buttons/SkyUnitStartButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/building/BuildingBlockDataMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/cursor/CursorClientEventsMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/cursor/SkyUnitCursorClientEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/hud/ButtonMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/hud/HudClientEventsMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/player/PlayerServerEventMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/startpos/StartPosClientEventsMixin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/SkyUnitUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/structures/sky_town.nbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/allay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/parrot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/structures/sky_town.nbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/allay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/parrot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/skyunit/structures/library_mysterious.nbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/skyunit/structures/sky_town.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit$ClientModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit$ClientModEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnitCommonModEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/SkyUnitCommonModEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/MirrorSpell.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/ability/abilities/MirrorSpell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/blocks/LavaRiverBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/blocks/LavaRiverBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/building/production/SkyUnitProductionItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/building/production/SkyUnitProductionItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$ResearchCosts.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$ResearchCosts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$UnitCosts.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs$UnitCosts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingPlacementMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/building/BuildingPlacementMixin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/hud/PortraitRendererUnitMixin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxClientEventsMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxClientEventsMixin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/NecromancerUnitMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/NecromancerUnitMixin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitEntityRegistrar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitEntityRegistrar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitItemRegistrar.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/registars/SkyUnitItemRegistrar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/resources/SkyUnitResourceCosts.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/resources/SkyUnitResourceCosts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/SkeletonHorseSummonRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/SkeletonHorseSummonRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/monsters/SkeletonHorseSummonUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/monsters/SkeletonHorseSummonUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.1.6-hotfix4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.4.1-alpha.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.4.2-alpha-hotfix3.jar.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-0.4.2-alpha-hotfix4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/skyunit-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse_half.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/reignofnether/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/skyunit/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse_half.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/skyunit/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/reignofnether/structures/library_mysterious.nbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/skyunit.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/skyunit.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/essential-mod-partner/data.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/essential-mod-partner/data.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/skyunit-common-0.4.0.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/SkyUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/SkyUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/SkyUnitCommonModEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/SkyUnitCommonModEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/ability/abilities/MirrorSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/ability/abilities/MirrorSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/blocks/LavaRiverBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/blocks/LavaRiverBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/SkyUnitBuildings" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/SkyUnitBuildings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/buildings/skyunit/SkyTown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/buildings/skyunit/SkyTown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/production/SkyUnitProductionItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/building/production/SkyUnitProductionItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/config/SkyUnitCommonConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/building/BuildingPlacementMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/building/BuildingPlacementMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/building/buildings/placements/LibraryPlacementMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/building/buildings/placements/LibraryPlacementMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/hud/PortraitRendererUnitMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/hud/PortraitRendererUnitMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxClientEventsMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/sandbox/SandboxClientEventsMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/NecromancerUnitMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/mixin/unit/units/monsters/NecromancerUnitMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/registars/SkyUnitEntityRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/registars/SkyUnitEntityRegistrar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/registars/SkyUnitItemRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/registars/SkyUnitItemRegistrar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/resources/SkyUnitResourceCosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/resources/SkyUnitResourceCosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/modelling/renderers/IllusionerRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/monsters/SkeletonHorseSummonUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/monsters/SkeletonHorseSummonUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/BeeProd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/BeeProd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/ParrotProd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/ParrotProd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/ParrotUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/skyunit/ParrotUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/xiaohuige_hhy/skyunit/unit/units/villiagers/IllusionerUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/skeleton_horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/skeleton_horse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/skeleton_horse_half.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/reignofnether/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/skyunit/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/skeleton_horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/skeleton_horse.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/skeleton_horse_half.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/textures/mobheads/skeleton_horse_half.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/reignofnether/structures/library_mysterious.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/skyunit/structures/library_mysterious.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/skyunit.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/skyunit.mixins.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +184,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/6777084_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/unit/units/monsters/NecromancerUnit.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/ability/Ability.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/building/BuildingBlockData.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/building/BuildingPlacement.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/cursor/CursorClientEvents.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/sandbox/SandboxClientEvents.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/unit/UnitAction.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/unit/UnitActionItem.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/unit/UnitClientEvents.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-sources.jar!/net/minecraft/world/entity/monster/AbstractSkeleton.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-sources.jar!/net/minecraft/world/entity/monster/piglin/AbstractPiglin.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-sources.jar!/net/minecraft/world/entity/monster/piglin/Piglin.java" root0="SKIP_INSPECTION" />
@@ -332,7 +202,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -372,13 +242,13 @@
     &quot;jdk.selected.JDK&quot;: &quot;22&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/RON SkyUnit/src/main/java/net/xiaohuige_hhy/skyunit&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hbgch/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7289436_mapped_parchment_2023.09.03-1.20.1/1.20.1-dev.zip&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/RON SkyUnit/src/main/resources/assets/skyunit&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;全局库&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;应用程序.runClient.executor&quot;: &quot;Run&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;应用程序.runClient.executor&quot;: &quot;Debug&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;jdk.preference.JDK&quot;: [
@@ -388,11 +258,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\RON SkyUnit" />
-      <recent name="D:\RON SkyUnit\src\main\resources" />
-      <recent name="D:\RON SkyUnit\src" />
-      <recent name="D:\RON SkyUnit\.idea" />
-      <recent name="D:\RON SkyUnit\src\main\resources\assets\reignofnether" />
+      <recent name="D:\RON SkyUnit\src\main\resources\assets\skyunit" />
+      <recent name="D:\RON SkyUnit\src\main\resources\assets\reignofnether\structures" />
+      <recent name="D:\RON SkyUnit\src\main\resources\data\skyunit\structures" />
+      <recent name="D:\RON SkyUnit\run\saves" />
+      <recent name="D:\RON SkyUnit\src\main\resources\assets\skyunit\textures\mobheads" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\RON SkyUnit\build\libs" />
@@ -550,10 +420,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.RON SkyUnit" />
       <item itemvalue="Gradle.RON SkyUnit [build]" />
       <item itemvalue="Gradle.RON SkyUnit [clean]" />
       <item itemvalue="Gradle.RON SkyUnit [genIntellijRuns]" />
+      <item itemvalue="Gradle.RON SkyUnit" />
       <item itemvalue="应用程序.runClient" />
       <item itemvalue="应用程序.runData" />
       <item itemvalue="应用程序.runGameTestServer" />
@@ -561,8 +431,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RON SkyUnit [genIntellijRuns]" />
         <item itemvalue="Gradle.RON SkyUnit" />
+        <item itemvalue="Gradle.RON SkyUnit [genIntellijRuns]" />
         <item itemvalue="Gradle.RON SkyUnit [clean]" />
         <item itemvalue="Gradle.RON SkyUnit [build]" />
       </list>
@@ -669,7 +539,9 @@
     <MESSAGE value="修改版本名" />
     <MESSAGE value="修复" />
     <MESSAGE value="修复gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复gitignore" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="更新SkyUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新SkyUnit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,7 +590,22 @@
           </properties>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <condition expression="structureName == &quot;sky_town&quot;" language="JAVA" />
+          <url>jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/curse/maven/reign-of-nether-rts-in-minecraft-1118855/7365401_mapped_parchment_2023.09.03-1.20.1/reignofnether-1.20.1-dev.zip!/reignofnether-1.20.1-dev/src/main/java/com/solegendary/reignofnether/building/BuildingBlockData.java</url>
+          <line>29</line>
+          <properties class="com.solegendary.reignofnether.building.BuildingBlockData" method="getBuildingBlocksFromNbt">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="SkyUnitStartButton.selectedSkyUnitFaction" language="JAVA" custom="net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

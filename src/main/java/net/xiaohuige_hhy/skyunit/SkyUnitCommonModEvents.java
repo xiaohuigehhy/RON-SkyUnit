@@ -3,6 +3,7 @@ package net.xiaohuige_hhy.skyunit;
 
 import com.solegendary.reignofnether.registrars.PacketHandler;
 
+import net.minecraft.client.renderer.entity.ParrotRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,7 @@ import net.xiaohuige_hhy.skyunit.registars.SkyUnitItemRegistrar;
 import net.xiaohuige_hhy.skyunit.unit.modelling.renderers.IllusionerRenderer;
 import net.xiaohuige_hhy.skyunit.unit.modelling.renderers.SkeletonHorseSummonRenderer;
 import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerUnit;
 
 @Mod.EventBusSubscriber(modid = SkyUnit.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -32,14 +34,14 @@ public class SkyUnitCommonModEvents {
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers evt) {
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonRenderer::new);
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerRenderer::new);
-		evt.registerEntityRenderer(SkyUnitEntityRegistrar.PARROT_UNIT.get(). ParrotRenderer::new);
+		evt.registerEntityRenderer(SkyUnitEntityRegistrar.PARROT_UNIT.get(), ParrotRenderer::new);
 	}
 	
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent evt) {
 		evt.put(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonUnit.createAttributes().build());
 		evt.put(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerUnit.createAttributes().build());
-		evt.put(SkyUnitEntityRegistrar.PARROT_UNIT.get(). ParrotUnit.createAttributes.build());
+		evt.put(SkyUnitEntityRegistrar.PARROT_UNIT.get(), ParrotUnit.createAttributes().build());
 	}
 	
 	@SubscribeEvent

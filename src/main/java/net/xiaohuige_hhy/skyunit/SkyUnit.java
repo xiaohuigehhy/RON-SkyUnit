@@ -15,8 +15,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.network.NetworkConstants;
+import net.xiaohuige_hhy.skyunit.building.SkyUnitBuildings;
 import net.xiaohuige_hhy.skyunit.building.production.SkyUnitProductionItems;
 import net.xiaohuige_hhy.skyunit.config.SkyUnitCommonConfigs;
+import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitBlockRegistrar;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitEntityRegistrar;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitItemRegistrar;
@@ -27,7 +29,7 @@ import org.slf4j.Logger;
 public class SkyUnit {
 	
 	public static final String MOD_ID = "skyunit";
-	public static final String VERSION_STRING = "0.4.0";
+	public static final String VERSION_STRING = "0.4.1";
 	public static final Logger LOGGER = LogUtils.getLogger();
 	
 	public SkyUnit(FMLJavaModLoadingContext mlctx) {
@@ -35,6 +37,8 @@ public class SkyUnit {
 		SkyUnitBlockRegistrar.init(mlctx);
 		SkyUnitEntityRegistrar.init(mlctx);
 		SkyUnitProductionItems.init();
+		SkyUnitBuildings.init();
+		SkyUnitStartButton.register();
 		
 		IEventBus bus = mlctx.getModEventBus();
 		bus.addListener(SkyUnit::init);

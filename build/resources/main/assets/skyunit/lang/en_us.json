@@ -13,5 +13,7 @@
   "research.skyunit.mysterious_library": "Mysterious Library",
   "research.skyunit.mysterious_library.tooltip1": "Upgrades this library, unlocking the illusioner ability.",
   "units.monsters.skyunit.skeleton_horse_summon_unit": "Skeleton Horse Unit",
-  "units.villagers.skyunit.illusioner": "Illusioner Unit"
+  "units.villagers.skyunit.illusioner": "Illusioner Unit",
+  "hud.readybuttons.villagers.reignofnether.first_startpos": "First StartPos",
+  "hud.faction.skyunit.skyunit": "SkyUnit"
 }

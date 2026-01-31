@@ -8,9 +8,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.xiaohuige_hhy.skyunit.SkyUnit;
 import net.xiaohuige_hhy.skyunit.research.researchItems.ResearchMysteriousLibrary;
 import net.xiaohuige_hhy.skyunit.research.researchItems.ResearchNarrowLavaRiver;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotProd;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerProd;
 
 public class SkyUnitProductionItems {
+	public static final ParrotProd PARROT = register(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "parrot"), new ParrotProd());
 	public static final IllusionerProd ILLUSIONER = register(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "illusioner"), new IllusionerProd());
 	public static final ResearchMysteriousLibrary RESEARCH_MYSTERIOUS_LIBRARY = register(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "mysterious_library"), new ResearchMysteriousLibrary());
 	public static final ResearchNarrowLavaRiver RESEARCH_NARROW_LAVA_RIVER = register(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "narrow_lava_river"), new ResearchNarrowLavaRiver());

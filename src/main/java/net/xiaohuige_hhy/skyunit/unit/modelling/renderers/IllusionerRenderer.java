@@ -30,7 +30,6 @@ public class IllusionerRenderer extends AbstractVillagerUnitRenderer<IllusionerU
 				
 			}
 		});
-		this.model.getHat().visible = true;
 	}
 	
 	public @NotNull ResourceLocation getTextureLocation(@NotNull IllusionerUnit pEntity) {

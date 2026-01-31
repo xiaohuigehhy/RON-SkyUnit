@@ -21,6 +21,10 @@ public class SkyUnitItemRegistrar {
 		ITEMS.register("illusioner_unit_spawn_egg", () -> new ForgeSpawnEggItem(SkyUnitEntityRegistrar.ILLUSIONER_UNIT,
 			7697781, 31436, new Item.Properties()));
 	
+	public static final RegistryObject<ForgeSpawnEggItem> PARROT_UNIT =
+		ITEMS.register("parrot_unit_spawn_egg", () -> new ForgeSpawnEggItem(SkyUnitEntityRegistrar.PARROT_UNIT,
+			894731, 16711680, new Item.Properties()));
+	
 	public static void init(FMLJavaModLoadingContext context) {
 		ITEMS.register(context.getModEventBus());
 	}

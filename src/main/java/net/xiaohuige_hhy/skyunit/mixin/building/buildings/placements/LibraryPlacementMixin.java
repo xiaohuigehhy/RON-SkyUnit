@@ -39,5 +39,4 @@ public abstract class LibraryPlacementMixin extends ProductionPlacement {
 			}
 		}
 	}
-	
 }
