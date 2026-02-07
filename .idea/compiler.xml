@@ -10,8 +10,6 @@
         <module name="SkyUnit.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17">
-      <module name="net.xiaohuige_hhy.ron-skyunit.test" target="17" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="17" />
   </component>
 </project>

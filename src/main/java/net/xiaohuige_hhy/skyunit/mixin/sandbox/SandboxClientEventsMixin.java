@@ -54,7 +54,10 @@ public class SandboxClientEventsMixin {
 		if (faction == Faction.NONE) {
 			cir.setReturnValue(
 				SkyUnitStartButton.selectedSkyUnitFaction ?
-					List.of(SkyUnitProductionItems.PARROT.getPlaceButton())
+					List.of(
+						SkyUnitProductionItems.PARROT.getPlaceButton(),
+						SkyUnitProductionItems.BEE.getPlaceButton()
+					)
 					:
 					List.of(
 						ProductionItems.ENDERMAN.getPlaceButton(),

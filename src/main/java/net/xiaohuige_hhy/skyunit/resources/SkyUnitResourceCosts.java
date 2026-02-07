@@ -13,7 +13,9 @@ public class SkyUnitResourceCosts {
 	public static final ResourceCost RESEARCH_MYSTERIOUS_LIBRARY = new ResourceCost(ID, "RESEARCH_MYSTERIOUS_LIBRARY");
 	public static final ResourceCost RESEARCH_NARROW_LAVA_RIVER = new ResourceCost(ID, "RESEARCH_LAVA_RIVER");
 	public static final ResourceCost SKY_TOWN = new ResourceCost(ID, "SKY_TOWN");
+	public static final ResourceCost BEE_HIVE = new ResourceCost(ID, "BEE_HIVE");
 	public static final ResourceCost PARROT = new ResourceCost(ID, "PARROT");
+	public static final ResourceCost BEE = new ResourceCost(ID, "BEE");
 	
 	public static void deferredLoadResourceCosts() {
 		ILLUSIONER.bakeValues(SkyUnitCommonConfigs.UnitCosts.ILLUSIONER);
@@ -21,6 +23,7 @@ public class SkyUnitResourceCosts {
 		RESEARCH_NARROW_LAVA_RIVER.bakeValues(SkyUnitCommonConfigs.ResearchCosts.RESEARCH_NARROW_LAVA_RIVER);
 		SKY_TOWN.bakeValues(SkyUnitCommonConfigs.ResearchCosts.SKY_TOWN);
 		PARROT.bakeValues(SkyUnitCommonConfigs.UnitCosts.PARROT);
+		BEE.bakeValues(SkyUnitCommonConfigs.UnitCosts.BEE);
 	}
 	
 }

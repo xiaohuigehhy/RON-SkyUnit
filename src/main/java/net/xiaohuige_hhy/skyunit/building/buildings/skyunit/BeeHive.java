@@ -22,13 +22,13 @@ import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
 
 import java.util.List;
 
-public class SkyTown extends ProductionBuilding implements SkyUnitBuilding {
+public class BeeHive extends ProductionBuilding implements SkyUnitBuilding {
 	
-	public final static String buildingName = "Sky Town";
-	public final static String structureName = "sky_town";
+	public final static String buildingName = "Bee Hive";
+	public final static String structureName = "bee_hive";
 	public final static ResourceCost cost = SkyUnitResourceCosts.SKY_TOWN;
 	
-	public SkyTown() {
+	public BeeHive() {
 		super(structureName, cost, true);
 		this.name = buildingName;
 		this.portraitBlock = Blocks.WHITE_WOOL;

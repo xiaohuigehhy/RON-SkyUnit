@@ -3,6 +3,7 @@ package net.xiaohuige_hhy.skyunit;
 
 import com.solegendary.reignofnether.registrars.PacketHandler;
 
+import net.minecraft.client.renderer.entity.BeeRenderer;
 import net.minecraft.client.renderer.entity.ParrotRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -19,6 +20,7 @@ import net.xiaohuige_hhy.skyunit.registars.SkyUnitItemRegistrar;
 import net.xiaohuige_hhy.skyunit.unit.modelling.renderers.IllusionerRenderer;
 import net.xiaohuige_hhy.skyunit.unit.modelling.renderers.SkeletonHorseSummonRenderer;
 import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.BeeUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerUnit;
 
@@ -35,6 +37,7 @@ public class SkyUnitCommonModEvents {
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonRenderer::new);
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerRenderer::new);
 		evt.registerEntityRenderer(SkyUnitEntityRegistrar.PARROT_UNIT.get(), ParrotRenderer::new);
+		evt.registerEntityRenderer(SkyUnitEntityRegistrar.BEE_UNIT.get(), BeeRenderer::new);
 	}
 	
 	@SubscribeEvent
@@ -42,6 +45,7 @@ public class SkyUnitCommonModEvents {
 		evt.put(SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get(), SkeletonHorseSummonUnit.createAttributes().build());
 		evt.put(SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get(), IllusionerUnit.createAttributes().build());
 		evt.put(SkyUnitEntityRegistrar.PARROT_UNIT.get(), ParrotUnit.createAttributes().build());
+		evt.put(SkyUnitEntityRegistrar.BEE_UNIT.get(), BeeUnit.createAttributes().build());
 	}
 	
 	@SubscribeEvent
@@ -55,6 +59,7 @@ public class SkyUnitCommonModEvents {
 			event.accept(SkyUnitItemRegistrar.SKELETON_HORSE_SUMMON_UNIT);
 			event.accept(SkyUnitItemRegistrar.ILLUSIONER_UNIT);
 			event.accept(SkyUnitItemRegistrar.PARROT_UNIT);
+			event.accept(SkyUnitItemRegistrar.BEE_UNIT);
 		}
 	}
 }

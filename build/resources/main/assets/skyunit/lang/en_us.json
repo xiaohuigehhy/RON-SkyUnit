@@ -15,5 +15,7 @@
   "units.monsters.skyunit.skeleton_horse_summon_unit": "Skeleton Horse Unit",
   "units.villagers.skyunit.illusioner": "Illusioner Unit",
   "hud.readybuttons.villagers.reignofnether.first_startpos": "First StartPos",
-  "hud.faction.skyunit.skyunit": "SkyUnit"
+  "hud.faction.skyunit.skyunit": "SkyUnit",
+  "buildings.skyunit.reignofnether.skytown": "SkyTown",
+  "buildings.skyunit.reignofnether.skytown.tooltip1": "A Town"
 }

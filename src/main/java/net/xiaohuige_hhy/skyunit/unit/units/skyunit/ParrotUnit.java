@@ -43,7 +43,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
 import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
-import net.xiaohuige_hhy.skyunit.unit.SkyUnitUnit;
+import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
 
 import org.jetbrains.annotations.NotNull;
 

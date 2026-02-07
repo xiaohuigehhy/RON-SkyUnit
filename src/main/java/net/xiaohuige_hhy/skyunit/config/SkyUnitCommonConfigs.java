@@ -21,6 +21,7 @@ public class SkyUnitCommonConfigs {
 		ResearchCosts.RESEARCH_NARROW_LAVA_RIVER.define(BUILDER);
 		ResearchCosts.SKY_TOWN.define(BUILDER);
 		UnitCosts.PARROT.define(BUILDER);
+		UnitCosts.BEE.define(BUILDER);
 		SPEC = BUILDER.build();
 	}
 	
@@ -30,6 +31,7 @@ public class SkyUnitCommonConfigs {
 	public static class UnitCosts implements Costs {
 		public static final ResourceCostConfigEntry ILLUSIONER = ResourceCostConfigEntry.Unit(120, 80, 0, 0, 5, SkyUnitResourceCosts.ILLUSIONER, "Illusioner Config");
 		public static final ResourceCostConfigEntry PARROT = ResourceCostConfigEntry.Unit(50, 0, 0, 15, 3, SkyUnitResourceCosts.PARROT, "Parrot Config");
+		public static final ResourceCostConfigEntry BEE = ResourceCostConfigEntry.Unit(50, 50, 0, 15, 3, SkyUnitResourceCosts.BEE, "Parrot Config");
 	}
 	
 	public static class ResearchCosts implements Costs {

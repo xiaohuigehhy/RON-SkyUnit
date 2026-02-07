@@ -10,6 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.xiaohuige_hhy.skyunit.SkyUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.BeeProd;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.BeeUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotProd;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerProd;
@@ -34,6 +36,11 @@ public class SkyUnitEntityRegistrar {
 			.sized(EntityType.PARROT.getWidth(), EntityType.PARROT.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
 			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "parrot_unit").toString()));
+	public static final RegistryObject<EntityType<BeeUnit>> BEE_UNIT = ENTITIES.register("bee_unit",
+		() -> EntityType.Builder.of(BeeUnit::new, MobCategory.CREATURE)
+			.sized(EntityType.BEE.getWidth(), EntityType.BEE.getHeight())
+			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
+			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "bee_unit").toString()));
 	
 	public static void init(FMLJavaModLoadingContext context) {
 		ENTITIES.register(context.getModEventBus());
@@ -44,6 +51,7 @@ public class SkyUnitEntityRegistrar {
 			case "Skeleton Horse" -> SkyUnitEntityRegistrar.SKELETON_HORSE_SUMMON_UNIT.get();
 			case IllusionerProd.itemName -> SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get();
 			case ParrotProd.itemName -> SkyUnitEntityRegistrar.PARROT_UNIT.get();
+			case BeeProd.itemName -> SkyUnitEntityRegistrar.BEE_UNIT.get();
 			default -> null;
 		};
 	}

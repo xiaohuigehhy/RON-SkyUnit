@@ -113,7 +113,7 @@ public class PromoteIllusioner extends Ability {
 	
 	public int upDateCharges(BuildingPlacement buildingPlacement) {
 		this.maxCharges = getMaxCharges(buildingPlacement);
-		return getMaxCharges(buildingPlacement) - getCharges(buildingPlacement);
+		return Math.max(getMaxCharges(buildingPlacement) - getCharges(buildingPlacement), 0);
 	}
 	
 	@Override
