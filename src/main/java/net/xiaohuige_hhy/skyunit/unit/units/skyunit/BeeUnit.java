@@ -36,6 +36,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
 import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.goals.PickUpFlowerGoal;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -76,6 +77,7 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 	private MoveToTargetBlockGoal moveGoal;
 	private SelectedTargetGoal<? extends LivingEntity> targetGoal;
 	private ReturnResourcesGoal returnResourcesGoal;
+	private PickUpFlowerGoal pickUpFlowerGoal;
 	private AbstractMeleeAttackUnitGoal attackGoal;
 	// if true causes moveGoal and attackGoal to work together to allow attack moving
 	// moves to a block but will chase/attack nearby monsters in range up to a certain distance away
@@ -229,7 +231,7 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 	
 	@Nullable
 	public ResourceCost getCost() {
-		return SkyUnitResourceCosts.PARROT;
+		return SkyUnitResourceCosts.BEE;
 	}
 	
 	public boolean getWillRetaliate() {
@@ -332,6 +334,7 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 		this.buildRepairGoal = new BuildRepairGoal(this);
 		this.gatherResourcesGoal = new GatherResourcesGoal(this);
 		this.returnResourcesGoal = new ReturnResourcesGoal(this);
+		this.pickUpFlowerGoal = new PickUpFlowerGoal(this, true, 2);
 	}
 	
 	@Override
@@ -348,8 +351,9 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 		this.goalSelector.addGoal(2, returnResourcesGoal);
 		this.goalSelector.addGoal(2, garrisonGoal);
 		this.targetSelector.addGoal(2, targetGoal);
-		this.goalSelector.addGoal(3, moveGoal);
+//		this.goalSelector.addGoal(3, moveGoal);
 		this.goalSelector.addGoal(4, new RandomLookAroundUnitGoal(this));
+		this.goalSelector.addGoal(1, pickUpFlowerGoal);
 	}
 	
 	@Override

@@ -44,8 +44,8 @@ public class SkyUnitStartButton {
 	}
 	
 	public static void register() {
-		register(SkyUnitBuildings.SKYTOWN, Keybindings.keyQ);
-		register(SkyUnitBuildings.BEEHIVE, Keybindings.keyW);
+		register(SkyUnitBuildings.SKY_TOWN, Keybindings.keyQ);
+		register(SkyUnitBuildings.BEE_HIVE, Keybindings.keyW);
 		register(Buildings.BEACON);
 	}
 	

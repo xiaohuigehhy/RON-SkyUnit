@@ -310,7 +310,7 @@ public class ParrotUnit extends Parrot implements SkyUnitUnit, WorkerUnit, Attac
 	}
 	
 	public BlockState getReplantBlockState() {
-		return Blocks.NETHER_WART.defaultBlockState();
+		return Blocks.BEETROOTS.defaultBlockState();
 	}
 	
 	@Override

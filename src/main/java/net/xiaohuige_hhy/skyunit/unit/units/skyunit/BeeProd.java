@@ -1,6 +1,5 @@
 package net.xiaohuige_hhy.skyunit.unit.units.skyunit;
 
-import com.solegendary.reignofnether.ReignOfNether;
 import com.solegendary.reignofnether.building.buildings.placements.ProductionPlacement;
 import com.solegendary.reignofnether.building.production.ProductionItem;
 import com.solegendary.reignofnether.building.production.StartProductionButton;
@@ -44,7 +43,7 @@ public class BeeProd extends ProductionItem {
 	public UnitSpawnButton getPlaceButton() {
 		return new UnitSpawnButton(
 			itemName,
-			ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/bee.png"),
+			ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/bee.png"),
 			List.of(
 				FormattedCharSequence.forward(I18n.get("units.piglins.reignofnether.bee"), Style.EMPTY.withBold(true)),
 				FormattedCharSequence.forward("", Style.EMPTY),
@@ -66,7 +65,7 @@ public class BeeProd extends ProductionItem {
 		
 		return new StartProductionButton(
 			GruntProd.itemName,
-			ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/bee.png"),
+			ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/bee.png"),
 			hotkey,
 			() -> false,
 			() -> true,

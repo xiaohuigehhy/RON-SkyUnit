@@ -31,8 +31,8 @@ public class SkyTown extends ProductionBuilding implements SkyUnitBuilding {
 	public SkyTown() {
 		super(structureName, cost, true);
 		this.name = buildingName;
-		this.portraitBlock = Blocks.WHITE_WOOL;
-		this.icon = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/white_wool.png");
+		this.portraitBlock = Blocks.RED_WOOL;
+		this.icon = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/red_wool.png");
 		
 		this.buildTimeModifier = 0.331f; // 60s total build time with 3 parrots
 		this.canAcceptResources = true;
@@ -58,7 +58,7 @@ public class SkyTown extends ProductionBuilding implements SkyUnitBuilding {
 			name,
 			ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/white_wool.png"),
 			hotkey,
-			() -> BuildingClientEvents.getBuildingToPlace() == SkyUnitBuildings.SKYTOWN,
+			() -> BuildingClientEvents.getBuildingToPlace() == SkyUnitBuildings.SKY_TOWN,
 			() -> false,
 			() -> true,
 			List.of(

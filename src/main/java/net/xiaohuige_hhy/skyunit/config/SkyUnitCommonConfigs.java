@@ -20,6 +20,7 @@ public class SkyUnitCommonConfigs {
 		ResearchCosts.RESEARCH_MYSTERIOUS_LIBRARY.define(BUILDER);
 		ResearchCosts.RESEARCH_NARROW_LAVA_RIVER.define(BUILDER);
 		ResearchCosts.SKY_TOWN.define(BUILDER);
+		ResearchCosts.BEE_HIVE.define(BUILDER);
 		UnitCosts.PARROT.define(BUILDER);
 		UnitCosts.BEE.define(BUILDER);
 		SPEC = BUILDER.build();
@@ -38,6 +39,7 @@ public class SkyUnitCommonConfigs {
 		
 		public static final ResourceCostConfigEntry RESEARCH_MYSTERIOUS_LIBRARY = ResourceCostConfigEntry.Research(0, 500, 200, 140, SkyUnitResourceCosts.RESEARCH_MYSTERIOUS_LIBRARY, "Mysterious Library Research Config");
 		public static final ResourceCostConfigEntry RESEARCH_NARROW_LAVA_RIVER = ResourceCostConfigEntry.Research(0, 0, 200, 120, SkyUnitResourceCosts.RESEARCH_NARROW_LAVA_RIVER, "Narrow Lava River Research Config");
-		public static final ResourceCostConfigEntry SKY_TOWN = ResourceCostConfigEntry.Research(0, 350, 250, 0, SkyUnitResourceCosts.SKY_TOWN, "Sky Town");
+		public static final ResourceCostConfigEntry SKY_TOWN = ResourceCostConfigEntry.Research(0, 350, 250, 15, SkyUnitResourceCosts.SKY_TOWN, "Sky Town");
+		public static final ResourceCostConfigEntry BEE_HIVE = ResourceCostConfigEntry.Research(0, 150, 0, 15, SkyUnitResourceCosts.BEE_HIVE, "Bee Hive");
 	}
 }

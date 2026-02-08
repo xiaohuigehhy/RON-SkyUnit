@@ -26,21 +26,20 @@ public class BeeHive extends ProductionBuilding implements SkyUnitBuilding {
 	
 	public final static String buildingName = "Bee Hive";
 	public final static String structureName = "bee_hive";
-	public final static ResourceCost cost = SkyUnitResourceCosts.SKY_TOWN;
+	public final static ResourceCost cost = SkyUnitResourceCosts.BEE_HIVE;
 	
 	public BeeHive() {
 		super(structureName, cost, true);
 		this.name = buildingName;
-		this.portraitBlock = Blocks.WHITE_WOOL;
-		this.icon = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/white_wool.png");
+		this.portraitBlock = Blocks.BEEHIVE;
+		this.icon = ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/beehive_front.png");
 		
 		this.buildTimeModifier = 0.331f; // 60s total build time with 3 parrots
 		this.canAcceptResources = true;
 		
-		this.startingBlockTypes.add(Blocks.MUD_BRICKS);
 		this.startingBlockTypes.add(Blocks.GRASS_BLOCK);
 		
-		this.productions.add(SkyUnitProductionItems.PARROT, Keybindings.keyQ);
+		this.productions.add(SkyUnitProductionItems.BEE, Keybindings.keyQ);
 	}
 	
 	@Override
@@ -58,15 +57,15 @@ public class BeeHive extends ProductionBuilding implements SkyUnitBuilding {
 			name,
 			ResourceLocation.fromNamespaceAndPath("minecraft", "textures/block/white_wool.png"),
 			hotkey,
-			() -> BuildingClientEvents.getBuildingToPlace() == SkyUnitBuildings.SKYTOWN,
+			() -> BuildingClientEvents.getBuildingToPlace() == SkyUnitBuildings.BEE_HIVE,
 			() -> false,
 			() -> true,
 			List.of(
-				FormattedCharSequence.forward(I18n.get("buildings.skyunit.reignofnether.skytown"), Style.EMPTY.withBold(true)),
+				FormattedCharSequence.forward(I18n.get("buildings.skyunit.reignofnether.beehive"), Style.EMPTY.withBold(true)),
 				ResourceCosts.getFormattedCost(cost),
 				ResourceCosts.getFormattedPop(cost),
 				FormattedCharSequence.forward("", Style.EMPTY),
-				FormattedCharSequence.forward(I18n.get("buildings.skyunit.reignofnether.skytown.tooltip1"), Style.EMPTY)
+				FormattedCharSequence.forward(I18n.get("buildings.skyunit.reignofnether.beehive.tooltip1"), Style.EMPTY)
 			),
 			this
 		);

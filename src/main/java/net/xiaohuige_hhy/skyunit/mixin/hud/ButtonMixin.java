@@ -5,7 +5,10 @@ import com.solegendary.reignofnether.keybinds.Keybinding;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.world.entity.LivingEntity;
+import net.xiaohuige_hhy.skyunit.SkyUnit;
 import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
+import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -30,6 +33,9 @@ public class ButtonMixin {
 	@Shadow
 	public Supplier<Boolean> isSelected;
 	
+	@Shadow
+	public ResourceLocation iconResource;
+	
 	@Inject(method = "checkClicked", at = @At(value = "INVOKE", target = "Ljava/lang/Runnable;run()V", ordinal = 0), remap = false)
 	private void updateSkyUnitSelection(int mouseX, int mouseY, boolean leftClick, CallbackInfo ci) {
 		if (Arrays.asList(skyUnit$startPosButtons).contains(name)) {
@@ -41,6 +47,13 @@ public class ButtonMixin {
 	private void updateStartPosSelection(String name, int iconSize, ResourceLocation iconRl, Keybinding hotkey, Supplier<Boolean> isSelected, Supplier<Boolean> isHidden, Supplier<Boolean> isEnabled, Runnable onLeftClick, Runnable onRightClick, List<FormattedCharSequence> tooltipLines, CallbackInfo ci) {
 		if (Arrays.asList(skyUnit$startPosButtons).contains(name)) {
 			((Button) (Object) this).isSelected = () -> isSelected.get() && !SkyUnitStartButton.selectedSkyUnitFaction;
+		}
+	}
+	
+	@Inject(method = "<init>(Ljava/lang/String;ILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Supplier;Ljava/util/function/Supplier;Ljava/util/function/Supplier;Ljava/lang/Runnable;Ljava/lang/Runnable;Ljava/util/List;)V", at = @At(value = "TAIL"), remap = false)
+	private void setSkyUnit(String name, int iconSize, ResourceLocation iconRl, LivingEntity entity, Supplier<Boolean> isSelected, Supplier<Boolean> isHidden, Supplier<Boolean> isEnabled, Runnable onLeftClick, Runnable onRightClick, List<FormattedCharSequence> tooltipLines, CallbackInfo ci) {
+		if (entity instanceof SkyUnitUnit) {
+			this.iconResource = ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, iconRl.getPath());
 		}
 	}
 	

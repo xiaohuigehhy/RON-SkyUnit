@@ -22,6 +22,7 @@ public class SkyUnitResourceCosts {
 		RESEARCH_MYSTERIOUS_LIBRARY.bakeValues(SkyUnitCommonConfigs.ResearchCosts.RESEARCH_MYSTERIOUS_LIBRARY);
 		RESEARCH_NARROW_LAVA_RIVER.bakeValues(SkyUnitCommonConfigs.ResearchCosts.RESEARCH_NARROW_LAVA_RIVER);
 		SKY_TOWN.bakeValues(SkyUnitCommonConfigs.ResearchCosts.SKY_TOWN);
+		BEE_HIVE.bakeValues(SkyUnitCommonConfigs.ResearchCosts.BEE_HIVE);
 		PARROT.bakeValues(SkyUnitCommonConfigs.UnitCosts.PARROT);
 		BEE.bakeValues(SkyUnitCommonConfigs.UnitCosts.BEE);
 	}
