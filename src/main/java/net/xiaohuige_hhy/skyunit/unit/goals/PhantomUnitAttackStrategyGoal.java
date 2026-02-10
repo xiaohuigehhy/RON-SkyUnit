@@ -1,4 +1,4 @@
-package net.xiaohuige_hhy.skyunit.unit.units.goals;
+package net.xiaohuige_hhy.skyunit.unit.goals;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

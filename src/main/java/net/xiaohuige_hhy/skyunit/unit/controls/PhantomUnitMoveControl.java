@@ -1,4 +1,4 @@
-package net.xiaohuige_hhy.skyunit.unit.units.controls;
+package net.xiaohuige_hhy.skyunit.unit.controls;
 
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
