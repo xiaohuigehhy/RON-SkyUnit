@@ -15,8 +15,8 @@ import com.solegendary.reignofnether.sandbox.SandboxClientEvents;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.resources.ResourceLocation;
 import net.xiaohuige_hhy.skyunit.SkyUnit;
+import net.xiaohuige_hhy.skyunit.SkyUnitConfigs;
 import net.xiaohuige_hhy.skyunit.building.production.SkyUnitProductionItems;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -53,11 +53,8 @@ public class SandboxClientEventsMixin {
 		
 		if (faction == Faction.NONE) {
 			cir.setReturnValue(
-				SkyUnitStartButton.selectedSkyUnitFaction ?
-					List.of(
-						SkyUnitProductionItems.PARROT.getPlaceButton(),
-						SkyUnitProductionItems.BEE.getPlaceButton()
-					)
+				SkyUnitConfigs.selectedSkyUnitFaction ?
+					SkyUnitConfigs.unitPlaceButtons
 					:
 					List.of(
 						ProductionItems.ENDERMAN.getPlaceButton(),
@@ -74,8 +71,8 @@ public class SandboxClientEventsMixin {
 	
 	@Inject(method = "getNeutralBuildingButtons", at = @At(value = "RETURN"), remap = false, cancellable = true)
 	private static void addSkyUnitBuildingButtons(CallbackInfoReturnable<List<BuildingPlaceButton>> cir) {
-		if (SkyUnitStartButton.selectedSkyUnitFaction)
-			cir.setReturnValue(SkyUnitStartButton.SKYUNIT.getBuildingButtons());
+		if (SkyUnitConfigs.selectedSkyUnitFaction)
+			cir.setReturnValue(SkyUnitConfigs.SKYUNIT.getBuildingButtons());
 		else
 			cir.setReturnValue(FactionRegistries.NONE.getBuildingButtons());
 	}
@@ -90,7 +87,7 @@ public class SandboxClientEventsMixin {
 					case VILLAGERS -> ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/villager.png");
 					case MONSTERS -> ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/creeper.png");
 					case PIGLINS -> ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/grunt.png");
-					case NONE -> SkyUnitStartButton.selectedSkyUnitFaction ?
+					case NONE -> SkyUnitConfigs.selectedSkyUnitFaction ?
 						ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "textures/mobheads/allay.png") :
 						ResourceLocation.fromNamespaceAndPath(ReignOfNether.MOD_ID, "textures/mobheads/sheep.png");
 				},
@@ -104,12 +101,12 @@ public class SandboxClientEventsMixin {
 						case MONSTERS -> faction = Faction.PIGLINS;
 						case PIGLINS -> {
 							faction = Faction.NONE;
-							SkyUnitStartButton.selectedSkyUnitFaction = true;
+							SkyUnitConfigs.selectedSkyUnitFaction = true;
 							
 						}
 						case NONE -> {
-							if (SkyUnitStartButton.selectedSkyUnitFaction) {
-								SkyUnitStartButton.selectedSkyUnitFaction = false;
+							if (SkyUnitConfigs.selectedSkyUnitFaction) {
+								SkyUnitConfigs.selectedSkyUnitFaction = false;
 							} else {
 								faction = Faction.VILLAGERS;
 							}
@@ -124,11 +121,11 @@ public class SandboxClientEventsMixin {
 						case MONSTERS -> faction = Faction.VILLAGERS;
 						case PIGLINS -> faction = Faction.MONSTERS;
 						case NONE -> {
-							if (SkyUnitStartButton.selectedSkyUnitFaction) {
+							if (SkyUnitConfigs.selectedSkyUnitFaction) {
 								faction = Faction.PIGLINS;
-								SkyUnitStartButton.selectedSkyUnitFaction = false;
+								SkyUnitConfigs.selectedSkyUnitFaction = false;
 							} else {
-								SkyUnitStartButton.selectedSkyUnitFaction = true;
+								SkyUnitConfigs.selectedSkyUnitFaction = true;
 							}
 						}
 					}
@@ -137,8 +134,8 @@ public class SandboxClientEventsMixin {
 					fcs(I18n.get("hud.faction.reignofnether.villager"), faction == Faction.VILLAGERS),
 					fcs(I18n.get("hud.faction.reignofnether.monster"), faction == Faction.MONSTERS),
 					fcs(I18n.get("hud.faction.reignofnether.piglin"), faction == Faction.PIGLINS),
-					fcs(I18n.get("hud.faction.skyunit.skyunit"), faction == Faction.NONE && SkyUnitStartButton.selectedSkyUnitFaction),
-					fcs(I18n.get("hud.faction.reignofnether.neutral"), faction == Faction.NONE && !SkyUnitStartButton.selectedSkyUnitFaction)
+					fcs(I18n.get("hud.faction.skyunit.skyunit"), faction == Faction.NONE && SkyUnitConfigs.selectedSkyUnitFaction),
+					fcs(I18n.get("hud.faction.reignofnether.neutral"), faction == Faction.NONE && !SkyUnitConfigs.selectedSkyUnitFaction)
 				)
 			));
 	}

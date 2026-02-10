@@ -18,7 +18,6 @@ import net.minecraftforge.network.NetworkConstants;
 import net.xiaohuige_hhy.skyunit.building.SkyUnitBuildings;
 import net.xiaohuige_hhy.skyunit.building.production.SkyUnitProductionItems;
 import net.xiaohuige_hhy.skyunit.config.SkyUnitCommonConfigs;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitBlockRegistrar;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitEntityRegistrar;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitItemRegistrar;
@@ -38,7 +37,7 @@ public class SkyUnit {
 		SkyUnitEntityRegistrar.init(mlctx);
 		SkyUnitProductionItems.init();
 		SkyUnitBuildings.init();
-		SkyUnitStartButton.register();
+		SkyUnitConfigs.register();
 		
 		IEventBus bus = mlctx.getModEventBus();
 		bus.addListener(SkyUnit::init);

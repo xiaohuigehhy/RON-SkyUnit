@@ -15,14 +15,20 @@ public class SkyUnitCommonConfigs {
 		BUILDER.pop();
 		BUILDER.comment("SkyUnit Unit cost configurations");
 		
-		BUILDER.comment("Villagers");
-		UnitCosts.ILLUSIONER.define(BUILDER);
+		BUILDER.comment("Researches");
 		ResearchCosts.RESEARCH_MYSTERIOUS_LIBRARY.define(BUILDER);
 		ResearchCosts.RESEARCH_NARROW_LAVA_RIVER.define(BUILDER);
+		
+		BUILDER.comment("Villagers");
+		UnitCosts.ILLUSIONER.define(BUILDER);
+		
+		BUILDER.comment("SkyUnit");
 		ResearchCosts.SKY_TOWN.define(BUILDER);
 		ResearchCosts.BEE_HIVE.define(BUILDER);
 		UnitCosts.PARROT.define(BUILDER);
 		UnitCosts.BEE.define(BUILDER);
+		UnitCosts.PHANTOM.define(BUILDER);
+		
 		SPEC = BUILDER.build();
 	}
 	
@@ -33,6 +39,7 @@ public class SkyUnitCommonConfigs {
 		public static final ResourceCostConfigEntry ILLUSIONER = ResourceCostConfigEntry.Unit(120, 80, 0, 0, 5, SkyUnitResourceCosts.ILLUSIONER, "Illusioner Config");
 		public static final ResourceCostConfigEntry PARROT = ResourceCostConfigEntry.Unit(50, 0, 0, 15, 3, SkyUnitResourceCosts.PARROT, "Parrot Config");
 		public static final ResourceCostConfigEntry BEE = ResourceCostConfigEntry.Unit(50, 50, 0, 15, 3, SkyUnitResourceCosts.BEE, "Parrot Config");
+		public static final ResourceCostConfigEntry PHANTOM = ResourceCostConfigEntry.Unit(50, 50, 0, 15, 3, SkyUnitResourceCosts.PHANTOM, "Parrot Config");
 	}
 	
 	public static class ResearchCosts implements Costs {

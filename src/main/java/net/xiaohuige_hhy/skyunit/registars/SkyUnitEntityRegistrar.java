@@ -14,6 +14,8 @@ import net.xiaohuige_hhy.skyunit.unit.units.skyunit.BeeProd;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.BeeUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotProd;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.ParrotUnit;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.PhantomProd;
+import net.xiaohuige_hhy.skyunit.unit.units.skyunit.PhantomUnit;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerProd;
 import net.xiaohuige_hhy.skyunit.unit.units.villiagers.IllusionerUnit;
 
@@ -41,6 +43,11 @@ public class SkyUnitEntityRegistrar {
 			.sized(EntityType.BEE.getWidth(), EntityType.BEE.getHeight())
 			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
 			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "bee_unit").toString()));
+	public static final RegistryObject<EntityType<PhantomUnit>> PHANTOM_UNIT = ENTITIES.register("phantom_unit",
+		() -> EntityType.Builder.of(PhantomUnit::new, MobCategory.CREATURE)
+			.sized(EntityType.PHANTOM.getWidth(), EntityType.PHANTOM.getHeight())
+			.clientTrackingRange(UNIT_CLIENT_TRACKING_RANGE)
+			.build(ResourceLocation.fromNamespaceAndPath(SkyUnit.MOD_ID, "phantom_unit").toString()));
 	
 	public static void init(FMLJavaModLoadingContext context) {
 		ENTITIES.register(context.getModEventBus());
@@ -52,6 +59,7 @@ public class SkyUnitEntityRegistrar {
 			case IllusionerProd.itemName -> SkyUnitEntityRegistrar.ILLUSIONER_UNIT.get();
 			case ParrotProd.itemName -> SkyUnitEntityRegistrar.PARROT_UNIT.get();
 			case BeeProd.itemName -> SkyUnitEntityRegistrar.BEE_UNIT.get();
+			case PhantomProd.itemName -> SkyUnitEntityRegistrar.PHANTOM_UNIT.get();
 			default -> null;
 		};
 	}

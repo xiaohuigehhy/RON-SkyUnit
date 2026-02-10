@@ -65,7 +65,7 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 	private final List<ItemStack> items = new ArrayList<>();
 	public BuildRepairGoal buildRepairGoal;
 	public GatherResourcesGoal gatherResourcesGoal;
-	public int maxResources = 20;
+	public int maxResources = 100;
 	Object2ObjectArrayMap<Ability, Float> cooldowns = Unit.createCooldownMap();
 	Object2ObjectArrayMap<Ability, Integer> charges = new Object2ObjectArrayMap<>();
 	Ability autocast;
@@ -325,35 +325,31 @@ public class BeeUnit extends Bee implements SkyUnitUnit, AttackerUnit {
 		this.readUnitSaveData(pCompound);
 	}
 	
+	@Override
 	public void initialiseGoals() {
 		this.usePortalGoal = new UsePortalGoal(this);
 		this.moveGoal = new MoveToTargetBlockGoal(this, false, 0);
 		this.targetGoal = new SelectedTargetGoal<>(this, true, true);
 		this.garrisonGoal = new GarrisonGoal(this);
 		this.attackGoal = new MeleeAttackUnitGoal(this, false);
-		this.buildRepairGoal = new BuildRepairGoal(this);
-		this.gatherResourcesGoal = new GatherResourcesGoal(this);
 		this.returnResourcesGoal = new ReturnResourcesGoal(this);
-		this.pickUpFlowerGoal = new PickUpFlowerGoal(this, true, 2);
 	}
 	
 	@Override
 	protected void registerGoals() {
+		
 		super.registerGoals();
 		this.goalSelector.removeAllGoals(goal -> true);
-		
 		initialiseGoals();
 		this.goalSelector.addGoal(2, usePortalGoal);
+		
 		this.goalSelector.addGoal(1, new FloatGoal(this));
 		this.goalSelector.addGoal(2, attackGoal);
-		this.goalSelector.addGoal(2, buildRepairGoal);
-		this.goalSelector.addGoal(2, gatherResourcesGoal);
 		this.goalSelector.addGoal(2, returnResourcesGoal);
 		this.goalSelector.addGoal(2, garrisonGoal);
 		this.targetSelector.addGoal(2, targetGoal);
-//		this.goalSelector.addGoal(3, moveGoal);
+		this.targetSelector.addGoal(3, moveGoal);
 		this.goalSelector.addGoal(4, new RandomLookAroundUnitGoal(this));
-		this.goalSelector.addGoal(1, pickUpFlowerGoal);
 	}
 	
 	@Override

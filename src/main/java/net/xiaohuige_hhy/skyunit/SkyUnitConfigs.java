@@ -1,4 +1,4 @@
-package net.xiaohuige_hhy.skyunit.hud.buttons;
+package net.xiaohuige_hhy.skyunit;
 
 import static com.solegendary.reignofnether.startpos.StartPosClientEvents.getPos;
 import static com.solegendary.reignofnether.startpos.StartPosClientEvents.isEnabled;
@@ -12,6 +12,7 @@ import com.solegendary.reignofnether.cursor.CursorClientEvents;
 import com.solegendary.reignofnether.faction.Faction;
 import com.solegendary.reignofnether.faction.FactionRegister;
 import com.solegendary.reignofnether.hud.Button;
+import com.solegendary.reignofnether.hud.buttons.UnitSpawnButton;
 import com.solegendary.reignofnether.keybinds.Keybinding;
 import com.solegendary.reignofnether.keybinds.Keybindings;
 import com.solegendary.reignofnether.player.PlayerClientEvents;
@@ -25,32 +26,23 @@ import com.solegendary.reignofnether.util.LanguageUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.resources.ResourceLocation;
-import net.xiaohuige_hhy.skyunit.SkyUnit;
 import net.xiaohuige_hhy.skyunit.building.SkyUnitBuildings;
+import net.xiaohuige_hhy.skyunit.building.production.SkyUnitProductionItems;
 
 import java.util.List;
 
-public class SkyUnitStartButton {
+public class SkyUnitConfigs {
 	public static final int ICON_SIZE = 14;
 	
-	public static final FactionRegister SKYUNIT =new FactionRegister();
+	public static final List<UnitSpawnButton> unitPlaceButtons = List.of(
+		SkyUnitProductionItems.PARROT.getPlaceButton(),
+		SkyUnitProductionItems.BEE.getPlaceButton(),
+		SkyUnitProductionItems.PHANTOM.getPlaceButton()
+	);
 	
-	public static void register(Building building) {
-		SKYUNIT.registerBuilding(building);
-	}
-	
-	public static void register(Building building, Keybinding keybinding) {
-		SKYUNIT.registerBuilding(building, keybinding);
-	}
-	
-	public static void register() {
-		register(SkyUnitBuildings.SKY_TOWN, Keybindings.keyQ);
-		register(SkyUnitBuildings.BEE_HIVE, Keybindings.keyW);
-		register(Buildings.BEACON);
-	}
-	
+	public static final FactionRegister SKYUNIT = new FactionRegister();
+	private static final Minecraft MC = Minecraft.getInstance();
 	public static boolean selectedSkyUnitFaction = false;
-	
 	public static final Button skyUnitStartButton = new Button(
 		"SkyUnit",
 		ICON_SIZE,
@@ -69,9 +61,6 @@ public class SkyUnitStartButton {
 			fcs(LanguageUtil.getTranslation("hud.startbuttons.skyunit.reignofnether.second"))
 		)
 	);
-	
-	private static final Minecraft MC = Minecraft.getInstance();
-	
 	public static Button skyUnitReadyButton = new Button(
 		"SkyUnit",
 		14,
@@ -98,5 +87,19 @@ public class SkyUnitStartButton {
 			fcs(I18n.get("hud.startbuttons.villagers.reignofnether.second_startpos"))
 		)
 	);
+	
+	public static void register(Building building) {
+		SKYUNIT.registerBuilding(building);
+	}
+	
+	public static void register(Building building, Keybinding keybinding) {
+		SKYUNIT.registerBuilding(building, keybinding);
+	}
+	
+	public static void register() {
+		register(SkyUnitBuildings.SKY_TOWN, Keybindings.keyQ);
+		register(SkyUnitBuildings.BEE_HIVE, Keybindings.keyW);
+		register(Buildings.BEACON);
+	}
 	
 }

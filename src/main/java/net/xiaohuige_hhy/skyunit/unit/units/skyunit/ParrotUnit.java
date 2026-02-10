@@ -41,7 +41,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
+import net.xiaohuige_hhy.skyunit.SkyUnitConfigs;
 import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
 import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
 
@@ -72,7 +72,7 @@ public class ParrotUnit extends Parrot implements SkyUnitUnit, WorkerUnit, Attac
 	private final List<ItemStack> items = new ArrayList<>();
 	public BuildRepairGoal buildRepairGoal;
 	public GatherResourcesGoal gatherResourcesGoal;
-	public int maxResources = 20;
+	public int maxResources = 100;
 	Object2ObjectArrayMap<Ability, Float> cooldowns = Unit.createCooldownMap();
 	Object2ObjectArrayMap<Ability, Integer> charges = new Object2ObjectArrayMap<>();
 	
@@ -102,7 +102,7 @@ public class ParrotUnit extends Parrot implements SkyUnitUnit, WorkerUnit, Attac
 	}
 	
 	public static List<BuildingPlaceButton> getBuildingButtons() {
-		List<BuildingPlaceButton> buttons = new ArrayList<>(SkyUnitStartButton.SKYUNIT.getBuildingButtons());
+		List<BuildingPlaceButton> buttons = new ArrayList<>(SkyUnitConfigs.SKYUNIT.getBuildingButtons());
 		
 		//TODO Add to Register
 		CustomBuildingClientEvents.customBuildings.forEach(cb -> buttons.add(cb.getWorkerBuildButton(null)));

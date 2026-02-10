@@ -6,7 +6,7 @@ import com.solegendary.reignofnether.faction.Faction;
 import com.solegendary.reignofnether.startpos.StartPosClientEvents;
 
 import net.minecraft.client.Minecraft;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
+import net.xiaohuige_hhy.skyunit.SkyUnitConfigs;
 
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,7 +29,7 @@ public class StartPosClientEventsMixin {
 			MC.player != null &&
 			!getPos().playerName.equals(MC.player.getName().getString()) &&
 			getPos().faction != Faction.NONE &&
-			!SkyUnitStartButton.selectedSkyUnitFaction);
+			!SkyUnitConfigs.selectedSkyUnitFaction);
 	}
 	
 }

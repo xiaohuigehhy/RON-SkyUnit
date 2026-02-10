@@ -7,7 +7,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
 import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
-import net.xiaohuige_hhy.skyunit.unit.units.monsters.SkeletonHorseSummonUnit;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,12 +19,12 @@ public class MiscUtilMixin {
 	@Inject(method = "getSimpleEntityName", at = @At("RETURN"), cancellable = true, remap = false)
 	private static void getSkyUnitName(Entity entity, CallbackInfoReturnable<String> cir) {
 		if (entity instanceof SkyUnitUnit) {
-			cir.setReturnValue(cir.getReturnValue().replace(
-				"entity.skyunit.", ""
-			));
+			cir.setReturnValue(
+				cir.getReturnValue()
+					.replace("entity.skyunit.", ""			)
+					.replace("_summon", "")
+			);
 		}
-		if (entity instanceof SkeletonHorseSummonUnit)
-			cir.setReturnValue("Skeleton Horse");
 	}
 	
 	@Inject(method = "findClosestAttackableEntity", at = @At("RETURN"), remap = false, cancellable = true)

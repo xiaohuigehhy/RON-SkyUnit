@@ -6,7 +6,7 @@ import com.solegendary.reignofnether.hud.buttons.StartButtons;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ScreenEvent;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
+import net.xiaohuige_hhy.skyunit.SkyUnitConfigs;
 
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -35,14 +35,14 @@ public class HudClientEventsMixin {
 	@Inject(method = "onDrawScreen", at = @At(value = "INVOKE", target = "Ljava/util/function/Supplier;get()Ljava/lang/Object;", ordinal = 26), remap = false)
 	private static void drawStartButton(ScreenEvent.Render.Post evt, CallbackInfo ci) {
 		int screenWidth = MC.getWindow().getGuiScaledWidth();
-		if (!SkyUnitStartButton.skyUnitStartButton.isHidden.get()) {
-			SkyUnitStartButton.skyUnitStartButton.render(evt.getGuiGraphics(),
+		if (!SkyUnitConfigs.skyUnitStartButton.isHidden.get()) {
+			SkyUnitConfigs.skyUnitStartButton.render(evt.getGuiGraphics(),
 				screenWidth - (StartButtons.ICON_SIZE * 2),
 				40,
 				mouseX,
 				mouseY
 			);
-			renderedButtons.add(SkyUnitStartButton.skyUnitStartButton);
+			renderedButtons.add(SkyUnitConfigs.skyUnitStartButton);
 		}
 	}
 	
@@ -51,14 +51,14 @@ public class HudClientEventsMixin {
 	private static void drawReadyButton(ScreenEvent.Render.Post evt, CallbackInfo ci) {
 		int screenWidth = MC.getWindow().getGuiScaledWidth();
 		
-		if (!SkyUnitStartButton.skyUnitReadyButton.isHidden.get()) {
-			SkyUnitStartButton.skyUnitReadyButton.render(evt.getGuiGraphics(),
+		if (!SkyUnitConfigs.skyUnitReadyButton.isHidden.get()) {
+			SkyUnitConfigs.skyUnitReadyButton.render(evt.getGuiGraphics(),
 				screenWidth - (StartButtons.ICON_SIZE * 2),
 				40,
 				mouseX,
 				mouseY
 			);
-			renderedButtons.add(SkyUnitStartButton.skyUnitReadyButton);
+			renderedButtons.add(SkyUnitConfigs.skyUnitReadyButton);
 		}
 	}
 }

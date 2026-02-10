@@ -30,7 +30,7 @@ public class EnchantMultishotMixin extends EnchantAbility {
 	}
 	
 	@Inject(method = "hasAnyEnchant", at = @At("HEAD"), remap = false, cancellable = true)
-	public void DontCheckEnchant(LivingEntity entity, @NotNull CallbackInfoReturnable<Boolean> cir) {
+	public void NoCheckEnchant(LivingEntity entity, @NotNull CallbackInfoReturnable<Boolean> cir) {
 		cir.setReturnValue(hasSameEnchant(entity));
 		cir.cancel();
 	}

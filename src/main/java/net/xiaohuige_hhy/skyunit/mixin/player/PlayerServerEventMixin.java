@@ -6,7 +6,7 @@ import com.solegendary.reignofnether.unit.interfaces.Unit;
 
 import net.minecraft.world.entity.EntityType;
 import net.minecraftforge.registries.RegistryObject;
-import net.xiaohuige_hhy.skyunit.hud.buttons.SkyUnitStartButton;
+import net.xiaohuige_hhy.skyunit.SkyUnitConfigs;
 import net.xiaohuige_hhy.skyunit.registars.SkyUnitEntityRegistrar;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,7 +25,7 @@ public class PlayerServerEventMixin {
 		com.solegendary.reignofnether.faction.Faction faction,
 		int startPosColorId
 	) {
-		if (faction == Faction.VILLAGERS && SkyUnitStartButton.selectedSkyUnitFaction) {
+		if (faction == Faction.VILLAGERS && SkyUnitConfigs.selectedSkyUnitFaction) {
 			return SkyUnitEntityRegistrar.PARROT_UNIT.get();
 		}
 		
