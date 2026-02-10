@@ -364,8 +364,8 @@ public class PhantomUnit extends Phantom implements SkyUnitUnit, AttackerUnit {
 		return new ArrayList<>(getAbilities().getButtons(this));
 	}
 	
-	public static enum AttackPhase {
+	public enum AttackPhase {
 		CIRCLE,
-		SWOOP;
+		SWOOP
 	}
 }
