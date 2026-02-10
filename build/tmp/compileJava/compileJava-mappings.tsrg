@@ -1,2 +1,0 @@
-net/xiaohuige_hhy/skyunit/mixin/world/entity/LivingEntityMixin hasEffect (Lnet/minecraft/world/effect/MobEffect;)Z m_21023_
-net/xiaohuige_hhy/skyunit/mixin/world/entity/LivingEntityMixin getMobType ()Lnet/minecraft/world/entity/MobType; m_6336_
