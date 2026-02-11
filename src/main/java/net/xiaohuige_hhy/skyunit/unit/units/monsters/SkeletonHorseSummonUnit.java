@@ -36,6 +36,7 @@ import net.minecraft.world.entity.animal.horse.SkeletonHorse;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -46,7 +47,7 @@ import javax.annotation.Nullable;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 
-public class SkeletonHorseSummonUnit extends SkeletonHorse implements Unit, AttackerUnit {
+public class SkeletonHorseSummonUnit extends SkeletonHorse implements SkyUnitUnit, AttackerUnit {
 	public static final Abilities ABILITIES = new Abilities();
 	public static final EntityDataAccessor<String> ownerDataAccessor =
 		SynchedEntityData.defineId(SkeletonHorseSummonUnit.class, EntityDataSerializers.STRING);

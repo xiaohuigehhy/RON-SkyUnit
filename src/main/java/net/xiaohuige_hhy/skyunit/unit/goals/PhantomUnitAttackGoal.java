@@ -4,6 +4,8 @@ import com.solegendary.reignofnether.unit.goals.MoveToTargetBlockGoal;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.xiaohuige_hhy.skyunit.unit.units.skyunit.PhantomUnit;
@@ -18,7 +20,6 @@ public class PhantomUnitAttackGoal extends MoveToTargetBlockGoal {
 		phantom = (PhantomUnit) mob;
 		this.setFlags(EnumSet.of(Flag.MOVE));
 	}
-	
 	
 	public boolean canUse() {
 		return (this.phantom.getTarget() != null && this.phantom.attackPhase == PhantomUnit.AttackPhase.SWOOP);
@@ -52,8 +53,12 @@ public class PhantomUnitAttackGoal extends MoveToTargetBlockGoal {
 	public void tick() {
 		LivingEntity livingentity = this.phantom.getTarget();
 		if (livingentity != null) {
-			this.phantom.moveTargetPoint = new Vec3(livingentity.getX(), livingentity.getY(0.5D), livingentity.getZ());
+			this.phantom.moveTargetPoint = new Vec3(livingentity.getX(), livingentity.getEyeY(), livingentity.getZ());
 			if (this.phantom.getBoundingBox().inflate(0.2F).intersects(livingentity.getBoundingBox())) {
+				AttributeInstance ai = mob.getAttribute(Attributes.ATTACK_DAMAGE);
+				if (ai != null) {
+					ai.setBaseValue(this.phantom.getUnitAttackDamage());
+				}
 				this.phantom.doHurtTarget(livingentity);
 				this.phantom.attackPhase = PhantomUnit.AttackPhase.CIRCLE;
 			} else if (this.phantom.horizontalCollision) {

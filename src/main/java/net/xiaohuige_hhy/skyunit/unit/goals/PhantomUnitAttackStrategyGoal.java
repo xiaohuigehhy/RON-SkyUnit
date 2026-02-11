@@ -1,6 +1,5 @@
 package net.xiaohuige_hhy.skyunit.unit.goals;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -30,49 +29,38 @@ public class PhantomUnitAttackStrategyGoal extends Goal {
 	
 	public void start() {
 		this.nextSweepTick = this.adjustedTickDelay(10);
-		this.setAnchorAboveTarget();
+//		this.phantom.anchorPoint = this.phantom.getMoveGoal().getMoveTarget().above(5 + (this.target != null ? this.random.nextInt(5) : 0));
 		this.phantom.attackPhase = PhantomUnit.AttackPhase.CIRCLE;
 		this.count = 4;
 	}
 	
-	/**
-	 * Reset the task's internal state. Called when this task is interrupted by another one
-	 */
 	public void stop() {
 		if (this.target != null)
 			this.phantom.anchorPoint = this.phantom.level().getHeightmapPos(Heightmap.Types.MOTION_BLOCKING, this.phantom.anchorPoint).above(10 + this.random.nextInt(20));
 	}
 	
 	public void tick() {
-		if (this.target == null) {
-			setAnchorAboveTarget();
+		if (this.target == null && this.phantom.attackPhase == PhantomUnit.AttackPhase.SWOOP) {
+			this.phantom.anchorPoint = this.phantom.getMoveGoal().getMoveTarget().above(2);
 			this.phantom.moveTargetPoint = this.phantom.anchorPoint.getCenter();
 		} else if (this.phantom.attackPhase == PhantomUnit.AttackPhase.CIRCLE) {
-			
+			if (this.target != null)
+				this.phantom.anchorPoint = this.target.blockPosition().above(10);
+			else
+				this.phantom.anchorPoint = this.phantom.getMoveGoal().getMoveTarget().above(50);
 			--this.nextSweepTick;
 			if (this.nextSweepTick <= 0) {
-				
-				this.setAnchorAboveTarget();
 				this.nextSweepTick = this.adjustedTickDelay((8 + this.random.nextInt(4)) * 20);
-				if (this.phantom.getTarget() == null)
+				this.phantom.anchorPoint = this.phantom.anchorPoint.above(this.random.nextInt(5));
+				if (this.phantom.getTarget() == null && this.phantom.getMoveGoal().getMoveTarget() == null)
 					return;
 				if (this.count < 4)
-					this.nextSweepTick = this.adjustedTickDelay(4 * 20);
-				else {
-					this.count = 0;
-				}
+					this.nextSweepTick = this.adjustedTickDelay(2 * 20);
 				this.phantom.attackPhase = PhantomUnit.AttackPhase.SWOOP;
-				this.count++;
+				this.count = (this.count + 1) % 5;
 			}
 		}
 		
-	}
-	
-	private void setAnchorAboveTarget() {
-		this.phantom.anchorPoint = this.target != null ? this.target.blockPosition().above(10 + this.random.nextInt(5)) : this.phantom.getMoveGoal().getMoveTarget().above(5);
-		if (this.phantom.anchorPoint.getY() < this.phantom.level().getSeaLevel()) {
-			this.phantom.anchorPoint = new BlockPos(this.phantom.anchorPoint.getX(), this.phantom.level().getSeaLevel() + 1, this.phantom.anchorPoint.getZ());
-		}
 	}
 	
 }

@@ -153,6 +153,7 @@ public class PromoteIllusioner extends Ability {
 					}
 					evokerUnit.discard();
 					unit.discard();
+					return;
 				}
 				MiscUtil.shootFirework(level, unit.getEyePosition());
 			}

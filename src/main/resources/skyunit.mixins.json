@@ -23,6 +23,7 @@
     "hud.AbilityButtonMixin",
     "hud.ButtonMixin",
     "hud.HudClientEventsMixin",
+    "hud.PortraitRendererUnitMixin",
     "player.PlayerServerEventMixin",
     "sandbox.SandboxClientEventsMixin",
     "sandbox.SandboxServerMixin",

@@ -40,7 +40,7 @@ public class PhantomUnitFollowGoal extends MoveToTargetBlockGoal {
 	}
 	
 	public boolean canUse() {
-		return (this.phantom.getTarget() != null || this.phantom.getFollowTarget() != null) && this.phantom.attackPhase == PhantomUnit.AttackPhase.CIRCLE;
+		return (this.phantom.getTarget() != null || this.phantom.getFollowTarget() != null || this.phantom.getMoveGoal().getMoveTarget() != null) && this.phantom.attackPhase == PhantomUnit.AttackPhase.CIRCLE;
 	}
 	
 	@Override

@@ -54,14 +54,14 @@ public class PhantomUnit extends Phantom implements SkyUnitUnit, AttackerUnit {
 		SynchedEntityData.defineId(PhantomUnit.class, EntityDataSerializers.STRING);
 	final static public float attackDamage = 6.0f;
 	final static public float attacksPerSecond = 0.5f;
-	final static public float aggroRange = 12;
+	final static public float aggroRange = 20;
 	final static public float armorValue = 0.0f;
 	final static public boolean willRetaliate = true; // will attack when hurt by an enemy
 	final static public boolean aggressiveWhenIdle = true;
 	final static public float maxHealth = 50.0f;
-	final static public float movementSpeed = 0.25f;
-	final static public float flyingSpeed = 1.0f;
+	final static public float flyingSpeed = 0.26f;
 	final static public float attackRange = 2;
+	static public float movementSpeed = 0.25f;
 	private final ArrayList<Checkpoint> checkpoints = new ArrayList<>();
 	private final List<ItemStack> items = new ArrayList<>();
 	public int maxResources = 100;
@@ -228,11 +228,12 @@ public class PhantomUnit extends Phantom implements SkyUnitUnit, AttackerUnit {
 		this.entityData.define(ownerDataAccessor, "");
 	}
 	
-	// endregion
-	
-	// comPhantom stats
 	public float getMovementSpeed() {
 		return movementSpeed;
+	}
+	
+	public void setMovementSpeed(float speed) {
+		movementSpeed = speed;
 	}
 	
 	public float getUnitMaxHealth() {
@@ -270,7 +271,7 @@ public class PhantomUnit extends Phantom implements SkyUnitUnit, AttackerUnit {
 	}
 	
 	public float getUnitAttackDamage() {
-		return attackDamage;
+		return attackDamage + 3 * this.getMovementSpeed() * 2;
 	}
 	
 	public BlockPos getAttackMoveTarget() {
@@ -321,6 +322,10 @@ public class PhantomUnit extends Phantom implements SkyUnitUnit, AttackerUnit {
 		super.tick();
 		Unit.tick(this);
 		AttackerUnit.tick(this);
+		if (!this.level().isClientSide()) {
+			SkyUnitUnit.checkAndPickupResources(this);
+			SkyUnitUnit.checkAndPickupEdibleFood(this);
+		}
 	}
 	
 	@Override

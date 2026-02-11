@@ -49,6 +49,7 @@ import net.minecraft.world.level.Level;
 import net.xiaohuige_hhy.skyunit.ability.abilities.BlindnessSpell;
 import net.xiaohuige_hhy.skyunit.ability.abilities.MirrorSpell;
 import net.xiaohuige_hhy.skyunit.resources.SkyUnitResourceCosts;
+import net.xiaohuige_hhy.skyunit.unit.interfaces.SkyUnitUnit;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -59,7 +60,7 @@ import javax.annotation.Nullable;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
 
-public class IllusionerUnit extends Illusioner implements Unit, AttackerUnit, RangedAttackerUnit {
+public class IllusionerUnit extends Illusioner implements SkyUnitUnit, AttackerUnit, RangedAttackerUnit {
 	public static final Abilities ABILITIES = new Abilities();
 	public static final EntityDataAccessor<String> ownerDataAccessor =
 		SynchedEntityData.defineId(IllusionerUnit.class, EntityDataSerializers.STRING);
